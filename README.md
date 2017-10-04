@@ -24,7 +24,7 @@ cd flow-project-3
 git checkout -b <feature_name_here>
 
 ```
-Make your changes for your development feature
+Make your changes to the new branch and then
 ```
 # See what files have been changed
 git status
