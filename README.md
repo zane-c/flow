@@ -10,3 +10,35 @@
 - Ian Lee
 - Zane Christenson
 - Zeyu Yun
+
+#### Getting started
+To work on this repo, run the following commands
+```
+# clone a local copy
+git clone https://github.berkeley.edu/berkeley-gamedev/flow-project-3.git
+
+# navigate into the repo
+cd flow-project-3
+
+# create a new development branch
+git checkout -b <feature_name_here>
+
+```
+Make your changes for your development feature
+```
+# See what files have been changed
+git status
+
+# add new/altered files
+git add <changed_files_here>
+
+# commit your changes
+git commit -m "A message describing your changes."
+
+# push your changes to the remote repo
+git push origin head
+```
+Your changes will now appear on github as a new feature branch. Your teammates can review your changes and merge
+it into master.
+
+Remember to run `git pull origin master` frequently to get the latest changes.
