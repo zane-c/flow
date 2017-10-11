@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61714759324887212}
   - component: {fileID: 58435505815979986}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: WhiteBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354772360346746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.812, y: 0.5127974, z: 0}
+  m_LocalPosition: {x: -4.6096377, y: 0.7856443, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.53
+  m_Radius: 0.32
 --- !u!61 &61714759324887212
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -95,14 +95,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.36, y: 1.36}
+    oldSize: {x: 0.71, y: 0.71}
     newSize: {x: 1.36, y: 1.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.09, y: 1.06}
+  m_Size: {x: 0.7, y: 0.67}
   m_EdgeRadius: 0
 --- !u!114 &114789573215808828
 MonoBehaviour:
@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreKeeper: {fileID: 0}
 --- !u!212 &212093048517218706
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -148,7 +147,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 876b3d7988bac4391ba3c619c854570e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8766d76fa3667e249baf193360a2520a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
