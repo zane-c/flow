@@ -4,25 +4,36 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-	public float speed = 5;
-	// Use this for initialization
-	void Start () {
+	private ScoreKeeper keeperScript;
+	private float initialSpeed = 5;
 
+
+	void Start () {
+		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 	}
 
 	public void init(Vector2 direction) {
-		GetComponent<Rigidbody2D> ().velocity = direction * speed;
+		GetComponent<Rigidbody2D>().velocity = direction * initialSpeed;
 	}
 
-	// Update is called once per frame
 	void Update () {
-
 	}
 
-	void OnTriggerEnter2D(Collider2D collider)
-	{
-		print ("collided with something");
+	void OnTriggerEnter2D(Collider2D collider) {
+		switch (collider.tag) {
+			case "BallDeath": {
+				keeperScript.ballDied();
+				Destroy(gameObject);
+				break;
+			}
+			case "Sink": {
+				keeperScript.ballScored();
+				Destroy(gameObject);
+				break;
+			}
+			default: {
+				break;
+			}
+		}
 	}
-
-
 }

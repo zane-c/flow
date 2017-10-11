@@ -14,14 +14,5 @@ public class Sink : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D(Collider2D collider)
-	{
-		if (collider.gameObject.tag == "Ball") {
-			score++;
-			print ("Score: " + score);
-			Destroy (collider.gameObject);
-		}
-
-
-	}
+	void OnTriggerEnter2D(Collider2D collider){}
 }

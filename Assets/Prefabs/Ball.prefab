@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50938534731750424}
   - component: {fileID: 114789573215808828}
   - component: {fileID: 61714759324887212}
+  - component: {fileID: 58435505815979986}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354772360346746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.19, y: 0.34, z: 0}
+  m_LocalPosition: {x: -0.812, y: 0.5127974, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,6 +64,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58435505815979986
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354772360346746}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.53
 --- !u!61 &61714759324887212
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -86,7 +102,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.36, y: 1.36}
+  m_Size: {x: 1.09, y: 1.06}
   m_EdgeRadius: 0
 --- !u!114 &114789573215808828
 MonoBehaviour:
@@ -99,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  ScoreKeeper: {fileID: 0}
 --- !u!212 &212093048517218706
 SpriteRenderer:
   m_ObjectHideFlags: 1
