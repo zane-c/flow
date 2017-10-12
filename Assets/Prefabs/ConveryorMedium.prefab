@@ -35,10 +35,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4200348681904856}
-  - component: {fileID: 114201451927964642}
+  - component: {fileID: 61080755930874590}
   m_Layer: 0
   m_Name: Rotator
-  m_TagString: Untagged
+  m_TagString: Rotatable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856516261212416}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -4.95, y: -1.02, z: 0}
+  m_LocalPosition: {x: 2.452476, y: -0.16183865, z: 0}
   m_LocalScale: {x: 0.15, y: 0.04, z: 1}
   m_Children:
   - {fileID: 4200348681904856}
@@ -102,6 +102,31 @@ Transform:
   m_Father: {fileID: 4200348681904856}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!61 &61080755930874590
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1429842144968210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5, y: 1.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 4}
+  m_EdgeRadius: 0
 --- !u!61 &61531272635862930
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -127,17 +152,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.36, y: 8.64}
   m_EdgeRadius: 0
---- !u!114 &114201451927964642
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1429842144968210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15739e5a1c655d049bb5a059a98d3d56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212697037117183824
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -178,8 +192,6 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212746068078513132
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -220,8 +232,6 @@ SpriteRenderer:
   m_Size: {x: 15.36, y: 8.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!252 &252974306749523922
 SurfaceEffector2D:
   m_ObjectHideFlags: 1

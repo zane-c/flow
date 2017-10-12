@@ -25,8 +25,6 @@ public class DraggingScript : MonoBehaviour {
 
 			RaycastHit2D hit2d = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 
-			Debug.Log("mouse down");
-
 			if (hit2d) {
 				if (hit2d.collider.CompareTag("Draggable")) {
 					gameObjectToDrag = hit2d.collider.gameObject;
