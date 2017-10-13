@@ -192,7 +192,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1190058949
+--- !u!1001 &801436988
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -201,11 +201,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4051657826885860, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.7
+      value: -5.9
       objectReference: {fileID: 0}
     - target: {fileID: 4051657826885860, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.59
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4051657826885860, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
       propertyPath: m_LocalPosition.z
@@ -221,19 +221,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4051657826885860, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.22969885
+      value: 0.16386652
       objectReference: {fileID: 0}
     - target: {fileID: 4051657826885860, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9732618
+      value: 0.9864825
       objectReference: {fileID: 0}
     - target: {fileID: 4051657826885860, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4051657826885860, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 26.559002
+    - target: {fileID: 1856516261212416, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
+      propertyPath: m_Name
+      value: ConveryorMedium (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ab42437b2af1cb4eb14f8b48ec93293, type: 2}
@@ -428,6 +428,8 @@ GameObject:
   - component: {fileID: 2027544910}
   - component: {fileID: 2027544909}
   - component: {fileID: 2027544908}
+  - component: {fileID: 2027544914}
+  - component: {fileID: 2027544913}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -505,3 +507,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027544913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027544907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786747358c35d1a4a91b55df6990018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2027544914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027544907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15739e5a1c655d049bb5a059a98d3d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deltaLimit: 5
+  deltaReduce: 5
+  rotatingMode: 0

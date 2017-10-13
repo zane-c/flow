@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class DraggingScript : MonoBehaviour {
 
-	public GameObject gameObjectToDrag;
+	private GameObject gameObjectToDrag;
 
-	public Vector3 GOCenter;
-	public Vector3 clickPosition;
-	public Vector3 offset; // between clickPosition and GOCenter
-	public Vector3 newGOCenter;//
+	private Vector3 GOCenter;
+	private Vector3 clickPosition;
+	private Vector3 offset; // between clickPosition and GOCenter
+	private Vector3 newGOCenter;//
 
-	RaycastHit hit;
-	public bool draggingMode = false;
+	private RaycastHit hit;
+	private bool draggingMode = false;
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {

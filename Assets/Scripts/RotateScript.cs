@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateScript : MonoBehaviour {
 
-	public Transform gameObjectToRotate;
+	private Transform gameObjectToRotate;
 
 	float deltaRotation;
 	public float deltaLimit;
@@ -54,9 +54,9 @@ public class RotateScript : MonoBehaviour {
 					rotatingMode = true;
 				}
 			}
-				
+
 			previousRotation = angleBetweenPoints (gameObjectToRotate.position, screenToWorldPoint);
-		} 
+		}
 		if (Input.GetMouseButton (0)) {
 			if (rotatingMode == true) {
 
@@ -68,7 +68,7 @@ public class RotateScript : MonoBehaviour {
 				previousRotation = currentRotation;
 				gameObjectToRotate.Rotate (Vector3.back * Time.deltaTime, deltaRotation);
 			}
-		} 
+		}
 		if (Input.GetMouseButtonUp (0)) {
 
 			rotatingMode = false;
