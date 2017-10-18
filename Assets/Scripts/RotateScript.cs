@@ -52,10 +52,11 @@ public class RotateScript : MonoBehaviour {
 					gameObjectToRotate = hit2d.collider.gameObject.transform.parent;
 					Debug.Log ("hit rotator");
 					rotatingMode = true;
+					previousRotation = angleBetweenPoints (gameObjectToRotate.position, screenToWorldPoint);
+
 				}
 			}
 
-			previousRotation = angleBetweenPoints (gameObjectToRotate.position, screenToWorldPoint);
 		}
 		if (Input.GetMouseButton (0)) {
 			if (rotatingMode == true) {
