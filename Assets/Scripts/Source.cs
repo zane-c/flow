@@ -14,8 +14,9 @@ public class Source : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Button startComp = StartButton.GetComponent<Button>();
-		startComp.onClick.AddListener(StartPauseGame);
+		// Button startComp = StartButton.GetComponent<Button>();
+		StartCoroutine (DropBall ());
+		// startComp.onClick.AddListener(StartPauseGame);
 	}
 
 	void StartPauseGame() {

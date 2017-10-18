@@ -8,6 +8,8 @@ TagManager:
   - BallDeath
   - Sink
   - Draggable
+  - Rotatable
+  - Flippable
   layers:
   - Default
   - TransparentFX
