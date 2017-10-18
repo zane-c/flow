@@ -1,16 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Source : MonoBehaviour {
 
 
 	public GameObject ballObject;
 
+	public Button StartButton;
+
+	public bool start = false;
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(DropBall());
+		Button startComp = StartButton.GetComponent<Button>();
+		startComp.onClick.AddListener(StartPauseGame);
+	}
+
+	void StartPauseGame() {
+		if (!start) {
+			StartCoroutine (DropBall ());
+			StartButton.GetComponentInChildren<Text>().text = "STOP";
+			start = true;
+		} else {
+			StopAllCoroutines ();
+			StartButton.GetComponentInChildren<Text>().text = "START";
+			start = false;
+		}
 	}
 
 	IEnumerator DropBall() {
