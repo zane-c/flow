@@ -28,7 +28,6 @@ public class Ball : MonoBehaviour {
 			}
 			case "Sink": {
 				keeperScript.ballScored();
-				Destroy(gameObject);
 				break;
 			}
 			default: {
