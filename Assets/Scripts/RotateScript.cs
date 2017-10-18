@@ -50,10 +50,8 @@ public class RotateScript : MonoBehaviour {
 			if (hit2d) {
 				if (hit2d.collider.CompareTag ("Rotatable")) {
 					gameObjectToRotate = hit2d.collider.gameObject.transform.parent;
-					Debug.Log ("hit rotator");
 					rotatingMode = true;
 					previousRotation = angleBetweenPoints (gameObjectToRotate.position, screenToWorldPoint);
-
 				}
 			}
 

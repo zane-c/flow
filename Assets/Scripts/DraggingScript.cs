@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DraggingScript : MonoBehaviour {
 
@@ -14,13 +15,17 @@ public class DraggingScript : MonoBehaviour {
 
 	private RaycastHit hit;
 	private bool draggingMode = false;
+	private bool isPlaying = false;
 
 	void Start () {
-
+		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
+		playBtn.onClick.AddListener(() => {
+			isPlaying = !isPlaying;
+		});
 	}
 
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0) && !isPlaying) {
 
 			RaycastHit2D hit2d = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 
@@ -36,13 +41,11 @@ public class DraggingScript : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetMouseButton(0))
+		if (Input.GetMouseButton(0) && !isPlaying && draggingMode)
 		{
-			if (draggingMode) {
-				clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-				newGOCenter = clickPosition - offset;
-				gameObjectToDrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOCenter.z);
-			}
+			clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			newGOCenter = clickPosition - offset;
+			gameObjectToDrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOCenter.z);
 		}
 
 		if (Input.GetMouseButtonUp(0))

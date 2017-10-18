@@ -53,7 +53,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballObject: {fileID: 1354772360346746, guid: d0709d332c02c4fa48074850ef765cab, type: 2}
-  playBtn: {fileID: 0}
 --- !u!212 &212764267330444642
 SpriteRenderer:
   m_ObjectHideFlags: 1

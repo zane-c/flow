@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class Source : MonoBehaviour {
 
 	public GameObject ballObject;
-	public Button playBtn;
 	private bool isPlaying = false;
 
 	void Start () {
+		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
 		playBtn.onClick.AddListener(() => {
 			isPlaying = !isPlaying;
 			if (isPlaying) {
 				StartCoroutine(DropBall());
 			} else {
-				StopCoroutine(DropBall());
+				StopAllCoroutines();
 			}
 		});
 	}
