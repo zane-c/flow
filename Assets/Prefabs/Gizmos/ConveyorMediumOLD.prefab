@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 61531272635862930}
   - component: {fileID: 252974306749523922}
   m_Layer: 0
-  m_Name: ConveryorMedium
+  m_Name: ConveyorMediumOLD
   m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856516261212416}
   m_LocalRotation: {x: -0, y: -0, z: 0.16386652, w: 0.9864825}
-  m_LocalPosition: {x: -5.9, y: -0.17, z: 0}
+  m_LocalPosition: {x: -1.79, y: 2.96, z: 0}
   m_LocalScale: {x: 0.15, y: 0.04, z: 1}
   m_Children:
   - {fileID: 4200348681904856}

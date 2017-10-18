@@ -5,6 +5,7 @@ using UnityEngine;
 public class DraggingScript : MonoBehaviour {
 
 	private GameObject gameObjectToDrag;
+	private bool isColliding = false;
 
 	private Vector3 GOCenter;
 	private Vector3 clickPosition;
@@ -14,12 +15,10 @@ public class DraggingScript : MonoBehaviour {
 	private RaycastHit hit;
 	private bool draggingMode = false;
 
-	// Use this for initialization
 	void Start () {
 
 	}
 
-	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
 
@@ -43,7 +42,6 @@ public class DraggingScript : MonoBehaviour {
 				clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 				newGOCenter = clickPosition - offset;
 				gameObjectToDrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOCenter.z);
-
 			}
 		}
 
@@ -52,6 +50,4 @@ public class DraggingScript : MonoBehaviour {
 			draggingMode = false;
 		}
 	}
-
-
 }
