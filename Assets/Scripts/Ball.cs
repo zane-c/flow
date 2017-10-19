@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour {
 
 	private ScoreKeeper keeperScript;
 	private float initialSpeed = 5;
+	public GameObject GhostBall;
 
 
 	void Start () {
@@ -17,6 +18,7 @@ public class Ball : MonoBehaviour {
 	}
 
 	void Update () {
+		Instantiate(GhostBall, transform.position, transform.rotation);
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {

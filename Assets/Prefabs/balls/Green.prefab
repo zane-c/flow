@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
 --- !u!212 &212465493498537502
 SpriteRenderer:
   m_ObjectHideFlags: 1
