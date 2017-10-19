@@ -227,7 +227,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1211253907497376}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9967857, w: -0.080114596}
+  m_LocalRotation: {x: 0, y: 0, z: -0.33527368, w: -0.94212085}
   m_LocalPosition: {x: 0.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -240,7 +240,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155444506240496}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9967857, w: -0.080114596}
+  m_LocalRotation: {x: 0, y: 0, z: -0.33527368, w: -0.94212085}
   m_LocalPosition: {x: -0.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -253,7 +253,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453861502233460}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9967857, w: -0.080114596}
+  m_LocalRotation: {x: 0, y: 0, z: -0.33527368, w: -0.94212085}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -266,7 +266,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1954633248200272}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9967857, w: -0.080114596}
+  m_LocalRotation: {x: 0, y: 0, z: -0.33527368, w: -0.94212085}
   m_LocalPosition: {x: 1.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -311,7 +311,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358596202425160}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9967857, w: -0.080114596}
+  m_LocalRotation: {x: 0, y: 0, z: -0.33527368, w: -0.94212085}
   m_LocalPosition: {x: -1.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -338,7 +338,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1692976957675764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.81, y: 1.11, z: 0}
+  m_LocalPosition: {x: -2.59, y: 0.14, z: 0}
   m_LocalScale: {x: 0.520661, y: 0.7224861, z: 1}
   m_Children:
   - {fileID: 4774802319903046}
@@ -837,7 +837,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 5
   m_SpeedVariation: 0.65
-  m_ForceScale: 0.5
-  m_UseContactForce: 1
-  m_UseFriction: 0
+  m_ForceScale: 1
+  m_UseContactForce: 0
+  m_UseFriction: 1
   m_UseBounce: 1
