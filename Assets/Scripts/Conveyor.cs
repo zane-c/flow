@@ -17,6 +17,9 @@ public class Conveyor : MonoBehaviour {
 		rotateArrow = gameObject.transform.GetChild (1).gameObject;
 		directionArrow = gameObject.transform.GetChild (2).gameObject;
 
+		rotateArrow.SetActive(true);
+		directionArrow.SetActive(true);
+
 		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
 		playBtn.onClick.AddListener(() => {
 			isPlaying = !isPlaying;
