@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class DraggingScript : MonoBehaviour {
 
+	public GameObject conveyerBelt;
 	private GameObject gameObjectToDrag;
+	private GameObject creator;
+	private GameObject itemMenu;
+	public Text conveyerBeltTxt;
 	private bool isColliding = false;
 
 	private Vector3 GOCenter;
@@ -19,6 +23,9 @@ public class DraggingScript : MonoBehaviour {
 
 	void Start () {
 		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
+
+		itemMenu = GameObject.Find ("ItemMenu").gameObject;
+
 		playBtn.onClick.AddListener(() => {
 			isPlaying = !isPlaying;
 		});
@@ -37,6 +44,24 @@ public class DraggingScript : MonoBehaviour {
 					offset = clickPosition - GOCenter;
 					draggingMode = true;
 				}
+				if (hit2d.collider.CompareTag("Creator")) {
+					Text component = conveyerBeltTxt.GetComponent<Text> ();
+					string numStr = component.text.Substring (1, component.text.Length - 1);
+					int numRemaining = int.Parse(numStr);
+
+					creator = hit2d.collider.gameObject;
+					if (numRemaining > 0) {
+						GameObject createdConveyer = Instantiate (conveyerBelt);
+						createdConveyer.transform.position = creator.transform.position;
+						gameObjectToDrag = createdConveyer;
+						GOCenter = gameObjectToDrag.transform.position;
+						clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+						offset = clickPosition - GOCenter;
+						draggingMode = true;
+						numRemaining--;
+						component.text = "x" + numRemaining;
+					}
+				}
 
 			}
 		}
@@ -46,11 +71,32 @@ public class DraggingScript : MonoBehaviour {
 			clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			newGOCenter = clickPosition - offset;
 			gameObjectToDrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOCenter.z);
+			if (gameObjectToDrag.transform.position.x > 6.5) {
+				
+			}
 		}
 
 		if (Input.GetMouseButtonUp(0))
 		{
-			draggingMode = false;
+			if (draggingMode) {
+				if (gameObjectToDrag.transform.position.x > 6.5) {
+					Destroy (gameObjectToDrag);
+					Debug.Log (gameObjectToDrag.transform.position.x);
+
+
+					Text component = conveyerBeltTxt.GetComponent<Text> ();
+
+					string numStr = component.text.Substring (1, component.text.Length - 1);
+					int numRemaining = int.Parse(numStr);
+					numRemaining++;
+					component.text = "x" + numRemaining;
+
+				}
+				draggingMode = false;
+			}
+			
+
+
 		}
 	}
 }
