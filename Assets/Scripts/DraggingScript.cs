@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class DraggingScript : MonoBehaviour {
 
+	public GameObject conveyerBelt;
 	private GameObject gameObjectToDrag;
+	private GameObject itemMenu;
+	public Text conveyerBeltTxt;
 	private bool isColliding = false;
 
 	private Vector3 GOCenter;
@@ -19,6 +22,9 @@ public class DraggingScript : MonoBehaviour {
 
 	void Start () {
 		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
+
+		itemMenu = GameObject.Find ("ItemMenu").gameObject;
+
 		playBtn.onClick.AddListener(() => {
 			isPlaying = !isPlaying;
 		});
@@ -37,6 +43,19 @@ public class DraggingScript : MonoBehaviour {
 					offset = clickPosition - GOCenter;
 					draggingMode = true;
 				}
+				if (gameObjectToDrag.transform.position.x > 6.5) {
+					Debug.Log (gameObjectToDrag.transform.position);
+					Text component = conveyerBeltTxt.GetComponent<Text> ();
+					string numStr = component.text.Substring (1, component.text.Length - 1);
+					int numRemaining = int.Parse(numStr);
+					numRemaining--;
+					component.text = "x" + numRemaining;
+
+					if (numRemaining > 0) {
+						GameObject createdConveyer = Instantiate (conveyerBelt);
+						createdConveyer.transform.position = gameObjectToDrag.transform.position;
+					}
+				}
 
 			}
 		}
@@ -50,7 +69,31 @@ public class DraggingScript : MonoBehaviour {
 
 		if (Input.GetMouseButtonUp(0))
 		{
-			draggingMode = false;
+			if (draggingMode) {
+				if (gameObjectToDrag.transform.position.x > 6.5) {
+					Destroy (gameObjectToDrag);
+					Debug.Log (gameObjectToDrag.transform.position.x);
+
+
+					Text component = conveyerBeltTxt.GetComponent<Text> ();
+
+					string numStr = component.text.Substring (1, component.text.Length - 1);
+					int numRemaining = int.Parse(numStr);
+					if (numRemaining == 0) {
+						GameObject createdConveyer = Instantiate (conveyerBelt);
+						createdConveyer.transform.position = new Vector3(7.7f, 4.0f, 0.0f);
+
+
+					}
+					numRemaining++;
+					component.text = "x" + numRemaining;
+
+				}
+				draggingMode = false;
+			}
+			
+
+
 		}
 	}
 }

@@ -71,7 +71,6 @@ public class RotateScript : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 
 			rotatingMode = false;
-			gameObjectToRotate.Rotate (Vector3.back * Time.deltaTime, deltaRotation);
 			deltaRotation = Mathf.Lerp (deltaRotation, 0, deltaReduce * Time.deltaTime);
 		}
 
