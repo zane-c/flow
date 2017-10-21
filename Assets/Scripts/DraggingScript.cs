@@ -81,7 +81,6 @@ public class DraggingScript : MonoBehaviour {
 			if (draggingMode) {
 				if (gameObjectToDrag.transform.position.x > 6.5) {
 					Destroy (gameObjectToDrag);
-					Debug.Log (gameObjectToDrag.transform.position.x);
 
 
 					Text component = conveyerBeltTxt.GetComponent<Text> ();

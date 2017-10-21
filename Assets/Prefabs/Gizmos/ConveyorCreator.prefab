@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 114929402135661698}
   m_Layer: 0
   m_Name: ConveyorCreator
-  m_TagString: Draggable
+  m_TagString: Creator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
