@@ -7,10 +7,13 @@ public class Ball : MonoBehaviour {
 	private ScoreKeeper keeperScript;
 	private float initialSpeed = 5;
 	public GameObject GhostBall;
+	private Rigidbody2D rb;
 
 
 	void Start () {
 		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
+		rb = gameObject.GetComponent<Rigidbody2D> ();
+		gameObject.GetComponent<CircleCollider2D> ().enabled = false;
 	}
 
 	public void init(Vector2 direction) {
@@ -18,7 +21,9 @@ public class Ball : MonoBehaviour {
 	}
 
 	void Update () {
-		Instantiate(GhostBall, transform.position, transform.rotation);
+		if (rb.velocity.magnitude > 0.1f) {
+			Instantiate (GhostBall, transform.position, transform.rotation);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
