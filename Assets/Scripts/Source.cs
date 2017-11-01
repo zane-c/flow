@@ -30,7 +30,7 @@ public class Source : MonoBehaviour {
 		stack.Push (b8);
 		stack.Push (b9);
 
-		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
+		Button playBtn = GameObject.Find ("DropBall").GetComponent<Button>();
 		playBtn.onClick.AddListener(() => {
 			ReleaseBall();
 		});
@@ -41,7 +41,6 @@ public class Source : MonoBehaviour {
 			GameObject ball = stack.Pop();
 			ball.GetComponent<Rigidbody2D> ().gravityScale = 1;
 			ball.GetComponent<CircleCollider2D> ().enabled = true;
-			print (ball.GetComponent<CircleCollider2D>().enabled);
 		}
 	}
 }
