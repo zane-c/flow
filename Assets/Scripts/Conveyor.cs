@@ -9,28 +9,24 @@ public class Conveyor : MonoBehaviour {
 	private Transform gears;
 	private GameObject rotateArrow;
 	private GameObject directionArrow;
-	private bool isPlaying = false;
+	private ScoreKeeper keeperScript;
 
 	void Start () {
 		effector = gameObject.GetComponent<SurfaceEffector2D> ();
-		gears = gameObject.transform.GetChild (0).transform;
-		rotateArrow = gameObject.transform.GetChild (1).gameObject;
-		directionArrow = gameObject.transform.GetChild (2).gameObject;
+		gears = transform.GetChild (0).transform;
+		rotateArrow = transform.GetChild (1).gameObject;
+		directionArrow = transform.GetChild (2).gameObject;
+		keeperScript = GameObject.Find ("ScoreKeeper").GetComponent<ScoreKeeper> ();
+	}
 
-		rotateArrow.SetActive(true);
-		directionArrow.SetActive(true);
-
-		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
-		playBtn.onClick.AddListener(() => {
-			isPlaying = !isPlaying;
-			if (isPlaying) {
-				rotateArrow.SetActive(false);
-				directionArrow.SetActive(false);
-			} else {
-				rotateArrow.SetActive(true);
-				directionArrow.SetActive(true);
-			}
-		});
+	void Update() {
+		if (keeperScript.getActiveBalls() > 0) {
+			rotateArrow.SetActive(false);
+			directionArrow.SetActive(false);
+		} else {
+			rotateArrow.SetActive(true);
+			directionArrow.SetActive(true);
+		}
 	}
 
 	public void flip() {

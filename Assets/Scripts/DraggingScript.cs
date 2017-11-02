@@ -10,29 +10,22 @@ public class DraggingScript : MonoBehaviour {
 	private GameObject creator;
 	private GameObject itemMenu;
 	public Text conveyerBeltTxt;
-	private bool isColliding = false;
 
 	private Vector3 GOCenter;
 	private Vector3 clickPosition;
 	private Vector3 offset; // between clickPosition and GOCenter
-	private Vector3 newGOCenter;//
+	private Vector3 newGOCenter;
 
 	private RaycastHit hit;
 	private bool draggingMode = false;
-	private bool isPlaying = false;
+	private ScoreKeeper keeperScript;
 
 	void Start () {
-		Button playBtn = GameObject.Find ("Play").GetComponent<Button>();
-
-		itemMenu = GameObject.Find ("ItemMenu").gameObject;
-
-		playBtn.onClick.AddListener(() => {
-			isPlaying = !isPlaying;
-		});
+		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 	}
 
 	void Update () {
-		if (Input.GetMouseButtonDown (0) && !isPlaying) {
+		if (Input.GetMouseButtonDown (0) && keeperScript.getActiveBalls() == 0) {
 
 			RaycastHit2D hit2d = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 
@@ -66,13 +59,13 @@ public class DraggingScript : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetMouseButton(0) && !isPlaying && draggingMode)
+		if (Input.GetMouseButton(0) && keeperScript.getActiveBalls() == 0 && draggingMode)
 		{
 			clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			newGOCenter = clickPosition - offset;
 			gameObjectToDrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOCenter.z);
 			if (gameObjectToDrag.transform.position.x > 6.5) {
-				
+
 			}
 		}
 
@@ -93,7 +86,7 @@ public class DraggingScript : MonoBehaviour {
 				}
 				draggingMode = false;
 			}
-			
+
 
 
 		}
