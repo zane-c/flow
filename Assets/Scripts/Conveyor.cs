@@ -34,6 +34,7 @@ public class Conveyor : MonoBehaviour {
 	}
 
 	public void flip() {
+		directionArrow.transform.GetChild(0).transform.Rotate (new Vector3 (0, 0, 180));
 		gears.Rotate(new Vector3(0, 180, 0));
 		effector.speed *= -1;
 	}
