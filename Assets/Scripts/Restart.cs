@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour {
 
 	void Start () {
-		Button playBtn = gameObject.GetComponent<Button> ();
-		playBtn.onClick.AddListener(() => {
+		Button rstBtn = gameObject.GetComponent<Button> ();
+		rstBtn.onClick.AddListener(() => {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		});
 	}
