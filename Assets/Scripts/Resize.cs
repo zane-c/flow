@@ -16,13 +16,6 @@ public class Resize : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-
-		Debug.Log (Screen.height);
-		Debug.Log (Screen.width);
-
-
-
 		grid = GetComponent<GridLayoutGroup>();
 		height = Screen.height;
 		width = Screen.width;

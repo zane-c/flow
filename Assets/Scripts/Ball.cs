@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour {
 	public GameObject GhostBall;
 	private Rigidbody2D rb;
 	private bool isDead = false;
+	private bool inSpinner = false;
 
 
 	void Start () {
@@ -38,6 +39,14 @@ public class Ball : MonoBehaviour {
 		} else if (collider.gameObject.layer == 8 && !isDead) {
 			keeperScript.ballDied ();
 			isDead = true;
+		} else if (collider.CompareTag("Spinner")) {
+			// gameObject.GetComponent<Rigidbody2D> ().AddTorque(30);
+		}
+	}
+
+	void onTriggerExit2D(Collider collider) {
+		if (collider.CompareTag ("Spinner")) {
+			// gameObject.GetComponent<Rigidbody2D> ().AddTorque (0);
 		}
 	}
 }

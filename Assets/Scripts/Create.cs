@@ -12,15 +12,10 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 	RectTransform m_RectTransform;
 
 	void Start () {
-//		countTxt = gameObject.transform.GetChild (0).GetComponent<Text>();
-//		Text component = conveyerBeltTxt.GetComponent<Text> ();
-//		countTxt = GameObject.Find("ConveyorBeltCreator").transform.GetChild (0).GetComponent<Text>();
-//		component.text = "x" + count;
 		component = countTxt.GetComponent<Text> ();
-
 	}
 
-	public void OnPointerDown (PointerEventData eventData) 
+	public void OnPointerDown (PointerEventData eventData)
 	{
 		m_RectTransform = GetComponent<RectTransform>();
 
@@ -28,16 +23,12 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 		string numStr = component.text.Substring (1, component.text.Length - 1);
 		int numRemaining = int.Parse(numStr);
 
-
-		Debug.Log (numRemaining);
-
 		if (numRemaining > 0) {
 			GameObject createdConveyer = Instantiate (gizmo);
 			createdConveyer.transform.position = m_RectTransform.position;
 			RaycastHit2D hit2d = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 			numRemaining--;
 			component.text = "x" + numRemaining;
-			Debug.Log (numRemaining);
 		}
 	}
 
