@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 222120028111702792}
   - component: {fileID: 114616598058583736}
   - component: {fileID: 61879225700952552}
-  - component: {fileID: 114882623249789090}
-  - component: {fileID: 114108445051056722}
+  - component: {fileID: 114987693541745000}
+  - component: {fileID: 114979943265629366}
   m_Layer: 5
   m_Name: ConveyorBeltCreator
   m_TagString: Creator
@@ -73,18 +73,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.39, y: 0.68}
   m_EdgeRadius: 0
---- !u!114 &114108445051056722
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722933283307010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096407fdb680a4ddc9d763c3ba0783b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countTxt: {fileID: 114926285876132718}
 --- !u!114 &114616598058583736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,7 +92,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 972dfe746ef114ad3bdd69a2a013c633, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6064761093a0e7d489ece8eddd9dcff0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -112,19 +100,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114882623249789090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722933283307010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e83fc80e237dd46ee89e584eef070f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmo: {fileID: 1692976957675764, guid: 101aa4ded2b02194b8f30cf57a1693b6, type: 2}
-  countTxt: {fileID: 114926285876132718}
 --- !u!114 &114926285876132718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,6 +133,31 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: x4
+--- !u!114 &114979943265629366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722933283307010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a58f29771a2d324ca38d46e5e71772c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countTxt: {fileID: 114926285876132718}
+--- !u!114 &114987693541745000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722933283307010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9c51d3bbcaeb648affffeb044d21ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmo: {fileID: 1692976957675764, guid: 101aa4ded2b02194b8f30cf57a1693b6, type: 2}
+  countTxt: {fileID: 114926285876132718}
 --- !u!222 &222120028111702792
 CanvasRenderer:
   m_ObjectHideFlags: 1

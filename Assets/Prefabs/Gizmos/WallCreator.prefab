@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 222767074283938424}
   - component: {fileID: 114063061166875072}
   - component: {fileID: 61918473131290738}
-  - component: {fileID: 114084737862942734}
-  - component: {fileID: 114463871448754766}
+  - component: {fileID: 114651443951236908}
+  - component: {fileID: 114050115813434934}
   m_Layer: 5
   m_Name: WallCreator
   m_TagString: Creator
@@ -73,6 +73,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.39, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &114050115813434934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432116978165592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a58f29771a2d324ca38d46e5e71772c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countTxt: {fileID: 114268566275153694}
 --- !u!114 &114063061166875072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,7 +104,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a956a7136ab8e4861b49d57a7269c4d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3bef97d083e37e4680bf709911954b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -100,19 +112,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114084737862942734
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1432116978165592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e83fc80e237dd46ee89e584eef070f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmo: {fileID: 1198426010403458, guid: aaab525ecec614479b2469e9287ff2be, type: 2}
-  countTxt: {fileID: 114268566275153694}
 --- !u!114 &114268566275153694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +147,7 @@ MonoBehaviour:
   m_Text: 'x4
 
 '
---- !u!114 &114463871448754766
+--- !u!114 &114651443951236908
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -156,9 +155,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1432116978165592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096407fdb680a4ddc9d763c3ba0783b9, type: 3}
+  m_Script: {fileID: 11500000, guid: ff9c51d3bbcaeb648affffeb044d21ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gizmo: {fileID: 1198426010403458, guid: aaab525ecec614479b2469e9287ff2be, type: 2}
   countTxt: {fileID: 114268566275153694}
 --- !u!222 &222333413659054908
 CanvasRenderer:
