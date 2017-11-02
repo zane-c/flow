@@ -52,7 +52,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ccb71e8cfad4c02919a98d2c619cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballObject: {fileID: 1743798012550768, guid: c1270abe3786b2c4993cabe7ecbc6ad5, type: 2}
+  b0: {fileID: 0}
+  b1: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
+  b4: {fileID: 0}
+  b5: {fileID: 0}
+  b6: {fileID: 0}
+  b7: {fileID: 0}
+  b8: {fileID: 0}
+  b9: {fileID: 0}
 --- !u!212 &212764267330444642
 SpriteRenderer:
   m_ObjectHideFlags: 1

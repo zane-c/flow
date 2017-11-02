@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61279034918552856}
   - component: {fileID: 58222798685705420}
   m_Layer: 0
-  m_Name: Blue10
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 61263769471451880}
   - component: {fileID: 58096070026950848}
   m_Layer: 0
-  m_Name: Blue8
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 61307634940579318}
   - component: {fileID: 58728225773742808}
   m_Layer: 0
-  m_Name: Blue7
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 61436508834816924}
   - component: {fileID: 58896966041150436}
   m_Layer: 0
-  m_Name: Blue4
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 61752959449116528}
   - component: {fileID: 58544477734032594}
   m_Layer: 0
-  m_Name: Blue5
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 61895382187402618}
   - component: {fileID: 58098922520318940}
   m_Layer: 0
-  m_Name: Blue9
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 61429795878347056}
   - component: {fileID: 58673868508234542}
   m_Layer: 0
-  m_Name: Blue3
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 61804944667454946}
   - component: {fileID: 58978918923640238}
   m_Layer: 0
-  m_Name: Blue1
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 61105425548677966}
   - component: {fileID: 58055729580140388}
   m_Layer: 0
-  m_Name: Blue2
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 61160788822485110}
   - component: {fileID: 58295939197257548}
   m_Layer: 0
-  m_Name: Blue6
+  m_Name: Purple
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062713713980142}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -4.55095, y: 3.8615034, z: 0}
+  m_LocalPosition: {x: -3.0444856, y: 1.6940976, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4486843912698300}
@@ -1575,7 +1575,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 358f1284953660a45be5619db1bef1e5, type: 3}
-  m_Color: {r: 1, g: 0.63823533, b: 0.09558821, a: 1}
+  m_Color: {r: 0.72647035, g: 0.3602941, b: 1, a: 0.741}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

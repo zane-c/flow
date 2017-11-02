@@ -35,6 +35,9 @@ public class Ball : MonoBehaviour {
 		} else if (collider.CompareTag (gameObject.name) && !isDead) {
 			keeperScript.ballScored ();
 			isDead = true;
+		} else if (collider.gameObject.layer == 8 && !isDead) {
+			keeperScript.ballDied ();
+			isDead = true;
 		}
 	}
 }
