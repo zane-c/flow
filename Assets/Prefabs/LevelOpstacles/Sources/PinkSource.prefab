@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61212212972501984}
   - component: {fileID: 58775438947751898}
   m_Layer: 0
-  m_Name: Blue2
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 61559764136496878}
   - component: {fileID: 58935515644121626}
   m_Layer: 0
-  m_Name: Blue9
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 61816283515230048}
   - component: {fileID: 58885092338647512}
   m_Layer: 0
-  m_Name: Blue5
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 61095913336366232}
   - component: {fileID: 58314005156008618}
   m_Layer: 0
-  m_Name: Blue3
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 61957932630764852}
   - component: {fileID: 58043667018175248}
   m_Layer: 0
-  m_Name: Blue7
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 61518071189971418}
   - component: {fileID: 58601856021207770}
   m_Layer: 0
-  m_Name: Blue4
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 61100163084539812}
   - component: {fileID: 58140418543644832}
   m_Layer: 0
-  m_Name: Blue10
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 61749968714951796}
   - component: {fileID: 58106389570334986}
   m_Layer: 0
-  m_Name: Blue6
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 61639614426527174}
   - component: {fileID: 58708864676464522}
   m_Layer: 0
-  m_Name: Blue1
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 61041338847182468}
   - component: {fileID: 58438410566164608}
   m_Layer: 0
-  m_Name: Blue8
+  m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1928051479053148}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -4.55095, y: 3.8615034, z: 0}
+  m_LocalPosition: {x: -6.025968, y: 3.8854675, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4179218659822094}
@@ -1575,7 +1575,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 358f1284953660a45be5619db1bef1e5, type: 3}
-  m_Color: {r: 1, g: 0.63823533, b: 0.09558821, a: 1}
+  m_Color: {r: 0.9941177, g: 0.5735294, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

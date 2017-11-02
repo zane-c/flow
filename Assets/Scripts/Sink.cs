@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sink : MonoBehaviour {
-	public int score = 0;
+
 	// Use this for initialization
 	void Start () {
 

@@ -10,6 +10,13 @@ TagManager:
   - Draggable
   - Rotatable
   - Flippable
+  - Creator
+  - Green
+  - White
+  - Blue
+  - Pink
+  - Purple
+  - Orange
   layers:
   - Default
   - TransparentFX

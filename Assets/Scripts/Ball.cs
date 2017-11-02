@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour {
 	private float initialSpeed = 5;
 	public GameObject GhostBall;
 	private Rigidbody2D rb;
+	private bool isDead = false;
 
 
 	void Start () {
@@ -27,19 +28,13 @@ public class Ball : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		switch (collider.tag) {
-			case "BallDeath": {
-				keeperScript.ballDied();
-				Destroy(gameObject);
-				break;
-			}
-			case "Sink": {
-				keeperScript.ballScored();
-				break;
-			}
-			default: {
-				break;
-			}
+		if (collider.CompareTag ("BallDeath") && !isDead) {
+			keeperScript.ballDied ();
+			Destroy (gameObject);
+			isDead = true;
+		} else if (collider.CompareTag (gameObject.name) && !isDead) {
+			keeperScript.ballScored ();
+			isDead = true;
 		}
 	}
 }

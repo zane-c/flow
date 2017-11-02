@@ -17,6 +17,7 @@ public class Source : MonoBehaviour {
 	public GameObject b9;
 
 	private Stack<GameObject> stack = new Stack<GameObject>();
+	private ScoreKeeper god;
 
 	void Start () {
 		stack.Push (b0);
@@ -34,6 +35,9 @@ public class Source : MonoBehaviour {
 		playBtn.onClick.AddListener(() => {
 			ReleaseBall();
 		});
+
+		god = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
+		god.addReserveBalls (10);
 	}
 
 	void ReleaseBall() {
