@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class DraggingScript : MonoBehaviour {
 
-	public GameObject conveyerBelt;
 	private GameObject gameObjectToDrag;
 	private GameObject creator;
-	private GameObject itemMenu;
-	public Text conveyerBeltTxt;
 
 	private Vector3 GOCenter;
 	private Vector3 clickPosition;
@@ -37,24 +34,6 @@ public class DraggingScript : MonoBehaviour {
 					offset = clickPosition - GOCenter;
 					draggingMode = true;
 				}
-				if (hit2d.collider.CompareTag("Creator")) {
-					Text component = conveyerBeltTxt.GetComponent<Text> ();
-					string numStr = component.text.Substring (1, component.text.Length - 1);
-					int numRemaining = int.Parse(numStr);
-
-					creator = hit2d.collider.gameObject;
-					if (numRemaining > 0) {
-						GameObject createdConveyer = Instantiate (conveyerBelt);
-						createdConveyer.transform.position = creator.transform.position;
-						gameObjectToDrag = createdConveyer;
-						GOCenter = gameObjectToDrag.transform.position;
-						clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-						offset = clickPosition - GOCenter;
-						draggingMode = true;
-						numRemaining--;
-						component.text = "x" + numRemaining;
-					}
-				}
 
 			}
 		}
@@ -73,16 +52,12 @@ public class DraggingScript : MonoBehaviour {
 		{
 			if (draggingMode) {
 				if (gameObjectToDrag.transform.position.x > 6.5) {
+					if (gameObjectToDrag.transform.GetChild (3).gameObject.CompareTag("ConveyorBelt")) {
+						creator = GameObject.Find ("ConveyorBeltCreator");
+						Text sup = creator.GetComponent<Text> ();
+						creator.GetComponent<Drop>().Increment();
+					}
 					Destroy (gameObjectToDrag);
-
-
-					Text component = conveyerBeltTxt.GetComponent<Text> ();
-
-					string numStr = component.text.Substring (1, component.text.Length - 1);
-					int numRemaining = int.Parse(numStr);
-					numRemaining++;
-					component.text = "x" + numRemaining;
-
 				}
 				draggingMode = false;
 			}

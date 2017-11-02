@@ -34,4 +34,10 @@ public class Conveyor : MonoBehaviour {
 		gears.Rotate(new Vector3(0, 180, 0));
 		effector.speed *= -1;
 	}
+
+	public void Recycle() {
+		
+		GameObject.Find("ConveyorBeltCreator").GetComponent<Drop> ().Increment ();
+	}
+
 }
