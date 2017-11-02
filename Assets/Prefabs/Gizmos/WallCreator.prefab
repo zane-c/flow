@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114063061166875072}
   - component: {fileID: 61918473131290738}
   - component: {fileID: 114084737862942734}
+  - component: {fileID: 114463871448754766}
   m_Layer: 5
   m_Name: WallCreator
   m_TagString: Creator
@@ -57,7 +58,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -91,7 +92,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d5e85a815b5a6e642ae38da118ccaeae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a956a7136ab8e4861b49d57a7269c4d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -110,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83fc80e237dd46ee89e584eef070f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmo: {fileID: 0}
-  conveyerBeltTxt: {fileID: 0}
+  gizmo: {fileID: 1198426010403458, guid: aaab525ecec614479b2469e9287ff2be, type: 2}
+  countTxt: {fileID: 114268566275153694}
 --- !u!114 &114268566275153694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,11 +141,25 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x4
+  m_Text: 'x4
+
+'
+--- !u!114 &114463871448754766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432116978165592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096407fdb680a4ddc9d763c3ba0783b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countTxt: {fileID: 114268566275153694}
 --- !u!222 &222333413659054908
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -165,7 +180,7 @@ RectTransform:
   m_GameObject: {fileID: 1432116978165592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -290.10056, y: -0.000038146973, z: 0}
-  m_LocalScale: {x: 1.5, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224637776269591930}
   m_Father: {fileID: 0}

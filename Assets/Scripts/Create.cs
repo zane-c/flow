@@ -7,7 +7,7 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 {
 
 	public GameObject gizmo;
-	public Text conveyerBeltTxt;
+	public Text countTxt;
 	private Text component;
 	RectTransform m_RectTransform;
 
@@ -16,7 +16,7 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 //		Text component = conveyerBeltTxt.GetComponent<Text> ();
 //		countTxt = GameObject.Find("ConveyorBeltCreator").transform.GetChild (0).GetComponent<Text>();
 //		component.text = "x" + count;
-		component = conveyerBeltTxt.GetComponent<Text> ();
+		component = countTxt.GetComponent<Text> ();
 
 	}
 
@@ -24,7 +24,7 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 	{
 		m_RectTransform = GetComponent<RectTransform>();
 
-		Text component = conveyerBeltTxt.GetComponent<Text> ();
+		Text component = countTxt.GetComponent<Text> ();
 		string numStr = component.text.Substring (1, component.text.Length - 1);
 		int numRemaining = int.Parse(numStr);
 

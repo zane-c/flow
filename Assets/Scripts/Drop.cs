@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Drop : MonoBehaviour {
 
 
-	public Text conveyerBeltTxt;
+	public Text countTxt;
 	RectTransform m_RectTransform;
 
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class Drop : MonoBehaviour {
 	}
 
 	public void Increment() {
-		Text component = conveyerBeltTxt.GetComponent<Text> ();
+		Text component = countTxt.GetComponent<Text> ();
 		string numStr = component.text.Substring (1, component.text.Length - 1);
 		int numRemaining = int.Parse(numStr);
 

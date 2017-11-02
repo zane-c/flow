@@ -51,9 +51,14 @@ public class DraggingScript : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0))
 		{
 			if (draggingMode) {
-				if (gameObjectToDrag.transform.position.x > 6.5) {
-					if (gameObjectToDrag.transform.GetChild (3).gameObject.CompareTag("ConveyorBelt")) {
+				if (gameObjectToDrag.transform.position.x > 7) {
+					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag("ConveyorBelt")) {
 						creator = GameObject.Find ("ConveyorBeltCreator");
+						Text sup = creator.GetComponent<Text> ();
+						creator.GetComponent<Drop>().Increment();
+					}
+					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag("Wall")) {
+						creator = GameObject.Find ("WallCreator");
 						Text sup = creator.GetComponent<Text> ();
 						creator.GetComponent<Drop>().Increment();
 					}
