@@ -59,10 +59,12 @@ public class ScoreKeeper : MonoBehaviour {
 		return scoredBalls;
 	}
 	public void ballDied() {
+		print("Ball Died");
 		deadBalls += 1;
 		activeBalls -= 1;
 	}
 	public void ballScored() {
+		print("Ball Scored");
 		scoredBalls += 1;
 		activeBalls -= 1;
 	}
@@ -72,8 +74,10 @@ public class ScoreKeeper : MonoBehaviour {
 		numberOfSources += 1;
 		Button playBtn = GameObject.Find ("DropBall").GetComponent<Button>();
 		playBtn.onClick.AddListener(() => {
-			activeBalls += 1;
-			reserveBalls -= 1;
+			if (reserveBalls > 0) {
+				activeBalls += 1;
+				reserveBalls -= 1;
+			}
 			print(activeBalls + " - " + reserveBalls + " - " + deadBalls + " - " + scoredBalls + " - " + totalBalls);
 		});
 	}
