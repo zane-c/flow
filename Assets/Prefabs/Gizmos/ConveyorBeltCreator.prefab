@@ -40,7 +40,6 @@ GameObject:
   - component: {fileID: 114616598058583736}
   - component: {fileID: 61879225700952552}
   - component: {fileID: 114987693541745000}
-  - component: {fileID: 114979943265629366}
   m_Layer: 5
   m_Name: ConveyorBeltCreator
   m_TagString: Creator
@@ -58,7 +57,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -132,19 +131,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x4
---- !u!114 &114979943265629366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722933283307010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a58f29771a2d324ca38d46e5e71772c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countTxt: {fileID: 114926285876132718}
+  m_Text: 'x6
+
+'
 --- !u!114 &114987693541745000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gizmo: {fileID: 1692976957675764, guid: 101aa4ded2b02194b8f30cf57a1693b6, type: 2}
+  count: 4
   countTxt: {fileID: 114926285876132718}
 --- !u!222 &222120028111702792
 CanvasRenderer:
@@ -177,15 +167,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415598325733686}
   m_LocalRotation: {x: -0, y: -0, z: 0.0050675296, w: 0.9999872}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -20, z: 0}
   m_LocalScale: {x: 1.000011, y: 1.000011, z: 1}
   m_Children: []
   m_Father: {fileID: 224547165157449614}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.58100003}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 26.4, y: 25.299988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224547165157449614
@@ -195,15 +185,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722933283307010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -290.10056, y: -0.000038146973, z: 0}
+  m_LocalPosition: {x: 20.876808, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224120064824505434}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290.10056, y: -0.000036525726}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20.876808, y: -50}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -8,7 +8,7 @@ public class Gizmo : MonoBehaviour {
 	public Image creator;
 
 	public void Recycle() {
-		creator.GetComponent<Drop> ().Increment ();
+		creator.GetComponent<Create> ().Increment ();
 	}
 
 }
