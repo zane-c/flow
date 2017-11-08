@@ -10,6 +10,7 @@ public class Conveyor : MonoBehaviour {
 	private GameObject rotateArrow;
 	private GameObject directionArrow;
 	private ScoreKeeper keeperScript;
+	private SpriteRenderer sr;
 
 	void Start () {
 		effector = gameObject.GetComponent<SurfaceEffector2D> ();
@@ -17,6 +18,7 @@ public class Conveyor : MonoBehaviour {
 		rotateArrow = transform.GetChild (2).gameObject;
 		directionArrow = transform.GetChild (3).gameObject;
 		keeperScript = GameObject.Find ("ScoreKeeper").GetComponent<ScoreKeeper> ();
+		sr = gameObject.GetComponent<SpriteRenderer> ();
 	}
 
 	void Update() {
@@ -33,6 +35,7 @@ public class Conveyor : MonoBehaviour {
 		directionArrow.transform.GetChild(0).transform.Rotate (new Vector3 (0, 0, 180));
 		gears.Rotate(new Vector3(0, 180, 0));
 		effector.speed *= -1;
+		sr.flipX = !sr.flipX;
 	}
 
 	public void Recycle() {
