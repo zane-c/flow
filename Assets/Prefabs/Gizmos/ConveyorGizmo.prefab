@@ -929,5 +929,5 @@ SurfaceEffector2D:
   m_SpeedVariation: 0.3
   m_ForceScale: 1
   m_UseContactForce: 0
-  m_UseFriction: 1
+  m_UseFriction: 0
   m_UseBounce: 1

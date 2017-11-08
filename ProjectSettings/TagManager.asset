@@ -18,6 +18,8 @@ TagManager:
   - Purple
   - Orange
   - Multiplier
+  - ConveyorBelt
+  - Wall
   layers:
   - Default
   - TransparentFX
