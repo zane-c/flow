@@ -39,14 +39,9 @@ public class Ball : MonoBehaviour {
 		} else if (collider.gameObject.layer == 8 && !isDead) {
 			keeperScript.ballDied ();
 			isDead = true;
-		} else if (collider.CompareTag("Spinner")) {
-			// gameObject.GetComponent<Rigidbody2D> ().AddTorque(30);
 		}
 	}
 
 	void onTriggerExit2D(Collider collider) {
-		if (collider.CompareTag ("Spinner")) {
-			// gameObject.GetComponent<Rigidbody2D> ().AddTorque (0);
-		}
 	}
 }
