@@ -37,7 +37,7 @@ public class Conveyor : MonoBehaviour {
 
 	public void Recycle() {
 		
-		GameObject.Find("ConveyorBeltCreator").GetComponent<Drop> ().Increment ();
+		GameObject.Find("ConveyorBeltCreator").GetComponent<Create> ().Increment ();
 	}
 
 }

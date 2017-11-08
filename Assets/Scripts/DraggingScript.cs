@@ -55,12 +55,12 @@ public class DraggingScript : MonoBehaviour {
 					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag("ConveyorBelt")) {
 						creator = GameObject.Find ("ConveyorBeltCreator");
 						Text sup = creator.GetComponent<Text> ();
-						creator.GetComponent<Drop>().Increment();
+						creator.GetComponent<Create>().Increment();
 					}
 					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag("Wall")) {
 						creator = GameObject.Find ("WallCreator");
 						Text sup = creator.GetComponent<Text> ();
-						creator.GetComponent<Drop>().Increment();
+						creator.GetComponent<Create>().Increment();
 					}
 					Destroy (gameObjectToDrag);
 				}
