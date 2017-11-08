@@ -368,7 +368,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1692976957675764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.93, y: 0.73, z: 0}
+  m_LocalPosition: {x: 1.09, y: -0.55, z: 0}
   m_LocalScale: {x: 0.520661, y: 0.7224861, z: 1}
   m_Children:
   - {fileID: 4269022200430090}
@@ -926,8 +926,8 @@ SurfaceEffector2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Speed: 6
-  m_SpeedVariation: 0.3
-  m_ForceScale: 0.3
-  m_UseContactForce: 0
-  m_UseFriction: 1
+  m_SpeedVariation: 0.25
+  m_ForceScale: 0.15
+  m_UseContactForce: 1
+  m_UseFriction: 0
   m_UseBounce: 1
