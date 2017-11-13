@@ -6,7 +6,7 @@ public class GhostLogo : MonoBehaviour {
 
 	// private SpriteRenderer sprite;
 	private float timer = 0.2f;
-	private float opacity = 0.1f;
+	// private float opacity = 0.1f;
 
 	void Start () {
 		// sprite = gameObject.GetComponent<SpriteRenderer>();
