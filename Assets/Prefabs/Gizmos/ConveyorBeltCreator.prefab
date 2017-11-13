@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9c51d3bbcaeb648affffeb044d21ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmo: {fileID: 1692976957675764, guid: 101aa4ded2b02194b8f30cf57a1693b6, type: 2}
+  gizmo: {fileID: 1797930526813820, guid: 0396645b447605242a5225f502cee57f, type: 2}
   count: 4
   countTxt: {fileID: 114926285876132718}
 --- !u!222 &222120028111702792
@@ -167,7 +167,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415598325733686}
   m_LocalRotation: {x: -0, y: -0, z: 0.0050675296, w: 0.9999872}
-  m_LocalPosition: {x: 0, y: -20, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.000011, y: 1.000011, z: 1}
   m_Children: []
   m_Father: {fileID: 224547165157449614}
@@ -185,7 +185,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722933283307010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.876808, y: -50, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224120064824505434}

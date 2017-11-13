@@ -492,6 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549013226cf7c4544bc6b6e144db29fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingDirection: right
+  disabledOnStart: 0
 --- !u!114 &114606368206051928
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,7 +9,6 @@ public class Ball : MonoBehaviour {
 	public GameObject GhostBall;
 	private Rigidbody2D rb;
 	private bool isDead = false;
-	private bool inSpinner = false;
 
 
 	void Start () {
@@ -33,7 +32,7 @@ public class Ball : MonoBehaviour {
 			keeperScript.ballDied ();
 			Destroy (gameObject);
 			isDead = true;
-		} else if (collider.CompareTag (gameObject.name) && !isDead) {
+		} else if (collider.tag == gameObject.name && !isDead) {
 			keeperScript.ballScored ();
 			isDead = true;
 		} else if (collider.gameObject.layer == 8 && !isDead) {

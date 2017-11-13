@@ -12,6 +12,9 @@ public class Conveyor : MonoBehaviour {
 	private ScoreKeeper keeperScript;
 	private SpriteRenderer sr;
 
+	public string startingDirection = "right";
+	public bool disabledOnStart = false;
+
 	void Start () {
 		effector = gameObject.GetComponent<SurfaceEffector2D> ();
 		gears = transform.GetChild (1).transform;
@@ -19,10 +22,17 @@ public class Conveyor : MonoBehaviour {
 		directionArrow = transform.GetChild (3).gameObject;
 		keeperScript = GameObject.Find ("ScoreKeeper").GetComponent<ScoreKeeper> ();
 		sr = gameObject.GetComponent<SpriteRenderer> ();
+
+		if (startingDirection == "left") {
+			flip();
+		}
+		if (disabledOnStart) {
+			gameObject.tag = "Untagged";
+		}
 	}
 
 	void Update() {
-		if (keeperScript.getActiveBalls() > 0) {
+		if (keeperScript.getActiveBalls() > 0 || disabledOnStart) {
 			rotateArrow.SetActive(false);
 			directionArrow.SetActive(false);
 		} else {
@@ -39,7 +49,6 @@ public class Conveyor : MonoBehaviour {
 	}
 
 	public void Recycle() {
-		
 		GameObject.Find("ConveyorBeltCreator").GetComponent<Create> ().Increment ();
 	}
 

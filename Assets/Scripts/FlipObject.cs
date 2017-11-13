@@ -14,7 +14,7 @@ public class FlipObject : MonoBehaviour {
 
 			if (hit2d && hit2d.collider.CompareTag("Flippable")) {
 				hit2d.collider.gameObject.transform.parent
-				.GetComponent<Conveyor> ().flip();
+					.GetComponent<ManualBelt> ().flip();
 			}
 		}
 	}
