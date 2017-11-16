@@ -41,7 +41,6 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 		int numRemaining = int.Parse(numStr);
 
 		numRemaining++;
-		Debug.Log (numRemaining);
 		component.text = "x" + numRemaining;
 	}
 

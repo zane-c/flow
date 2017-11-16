@@ -34,12 +34,12 @@ public class ScoreKeeper : MonoBehaviour {
 		Text stageText = dialogue.transform.GetChild (2).GetComponentInChildren<Text> ();
 
 		if (scoredBalls > 0) {
-			title.text = "Level Complete";
+			title.text = "Stage Complete";
 			next.gameObject.SetActive (true);
 			restart.gameObject.SetActive (false);
 
 		} else {
-			title.text = "Level Failed";
+			title.text = "Stage Failed";
 			next.gameObject.SetActive (false);
 			restart.gameObject.SetActive (true);
 		}
@@ -59,12 +59,10 @@ public class ScoreKeeper : MonoBehaviour {
 		return scoredBalls;
 	}
 	public void ballDied() {
-		print("Ball Died");
 		deadBalls += 1;
 		activeBalls -= 1;
 	}
 	public void ballScored() {
-		print("Ball Scored");
 		scoredBalls += 1;
 		activeBalls -= 1;
 	}
@@ -78,7 +76,7 @@ public class ScoreKeeper : MonoBehaviour {
 				activeBalls += 1;
 				reserveBalls -= 1;
 			}
-			print(activeBalls + " - " + reserveBalls + " - " + deadBalls + " - " + scoredBalls + " - " + totalBalls);
+			// print(activeBalls + " - " + reserveBalls + " - " + deadBalls + " - " + scoredBalls + " - " + totalBalls);
 		});
 	}
 }

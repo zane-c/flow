@@ -374,7 +374,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Level Complete
+  m_Text: Stage Complete
 --- !u!114 &114342534905838266
 MonoBehaviour:
   m_ObjectHideFlags: 1
