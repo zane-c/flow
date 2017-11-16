@@ -399,7 +399,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50201186141225714
 Rigidbody2D:
@@ -419,7 +419,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50345795332060266
 Rigidbody2D:
@@ -439,7 +439,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50374068036260104
 Rigidbody2D:
@@ -459,7 +459,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50452053646513420
 Rigidbody2D:
@@ -479,7 +479,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50452254539098566
 Rigidbody2D:
@@ -499,7 +499,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50521189226113896
 Rigidbody2D:
@@ -519,7 +519,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50613140099893636
 Rigidbody2D:
@@ -539,7 +539,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50931039308436388
 Rigidbody2D:
@@ -559,7 +559,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50941964038066788
 Rigidbody2D:
@@ -579,7 +579,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &58158689627161462
 CircleCollider2D:
@@ -993,6 +993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114189461365798236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1005,6 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114538085430636382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1017,6 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114649119481515056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1029,6 +1032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114738562412148686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1041,6 +1045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114768552193839916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1053,6 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114789932191712656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1065,6 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114909065934929732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1098,6 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114953686656529436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1110,6 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!114 &114990015566912504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1122,6 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostBall: {fileID: 1815695007746654, guid: e9717c0dca609174397d191649ba18d8, type: 2}
+  isDead: 0
 --- !u!212 &212166856012027544
 SpriteRenderer:
   m_ObjectHideFlags: 1

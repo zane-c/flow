@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour {
 	private float initialSpeed = 5;
 	public GameObject GhostBall;
 	private Rigidbody2D rb;
-	private bool isDead = false;
+	public bool isDead = false;
 
 
 	void Start () {
@@ -35,6 +35,7 @@ public class Ball : MonoBehaviour {
 		} else if (collider.tag == gameObject.name && !isDead) {
 			keeperScript.ballScored ();
 			isDead = true;
+			collider.transform.parent.gameObject.GetComponent<Sink>().AddBall (this.gameObject);
 		} else if (collider.gameObject.layer == 8 && !isDead) {
 			keeperScript.ballDied ();
 			isDead = true;
