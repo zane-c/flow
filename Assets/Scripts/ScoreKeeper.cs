@@ -49,6 +49,17 @@ public class ScoreKeeper : MonoBehaviour {
 		dialogue.SetActive (true);
 	}
 
+	public void nextStage(int balls) {
+		totalBalls = balls;
+		deadBalls = 0;
+		reserveBalls = balls;
+		activeBalls = 0;
+		scoredBalls = 0;
+		isGameOver = false;
+		stage++;
+	}
+
+
 	public int getDeadBalls() {
 		return deadBalls;
 	}
