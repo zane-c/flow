@@ -6,15 +6,17 @@ public class Ball : MonoBehaviour {
 
 	private ScoreKeeper keeperScript;
 	private float initialSpeed = 5;
+	public bool painted;
 	public GameObject GhostBall;
 	private Rigidbody2D rb;
 	private bool isDead = false;
 
 
+
 	void Start () {
 		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 		rb = gameObject.GetComponent<Rigidbody2D> ();
-		gameObject.GetComponent<CircleCollider2D> ().enabled = false;
+//		gameObject.GetComponent<CircleCollider2D> ().enabled = false;
 	}
 
 	public void init(Vector2 direction) {

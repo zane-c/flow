@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Resize : MonoBehaviour {
 
-	public GameObject self;
 	GridLayoutGroup grid;
 	int height;
 	int width;
