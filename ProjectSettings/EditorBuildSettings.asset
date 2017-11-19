@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3dce9d1663a78db4ea99cdf617796250
+  - enabled: 1
+    path: Assets/Scenes/TwoColorLevel.unity
+    guid: a2cb290d7d803bf4082d2af6ed96c208
+  - enabled: 1
+    path: Assets/Scenes/BetaDemoTwo.unity
+    guid: 1c84a506d855e4e04bdf38c3c7767dc0

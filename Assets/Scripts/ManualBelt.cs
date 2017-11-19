@@ -10,9 +10,9 @@ public class ManualBelt : MonoBehaviour {
 	private ScoreKeeper keeperScript;
 	private SpriteRenderer sr;
 
-	public float MAX_SPEED = 5.0f;
-	public float speed = 5;
-	public float torque = 1;
+	private float MAX_SPEED = 6;
+	private float speed = 2;
+	private float torque = 1;
 	private int direction = 1; // 1 == right, -1 == left
 
 	public string startingDirection = "right";
