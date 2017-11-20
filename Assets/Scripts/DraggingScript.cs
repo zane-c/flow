@@ -51,6 +51,14 @@ public class DraggingScript : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0))
 		{
 			if (draggingMode) {
+				ManualBelt belt = gameObjectToDrag.GetComponent<ManualBelt> ();
+				if (belt && !belt.getPlaceable()) {
+					gameObjectToDrag.transform.position = GOCenter;
+				}
+				Wall wall = gameObjectToDrag.GetComponent<Wall> ();
+				if (wall && !wall.getPlaceable()) {
+					gameObjectToDrag.transform.position = GOCenter;
+				}
 				if (gameObjectToDrag.transform.position.x > 7) {
 					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag("ConveyorBelt")) {
 						creator = GameObject.Find ("ConveyorBeltCreator");
@@ -66,9 +74,6 @@ public class DraggingScript : MonoBehaviour {
 				}
 				draggingMode = false;
 			}
-
-
-
 		}
 	}
 }

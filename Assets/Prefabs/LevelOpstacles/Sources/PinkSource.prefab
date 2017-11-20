@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114763020542198374}
   - component: {fileID: 61212212972501984}
   - component: {fileID: 58775438947751898}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114531803021572934}
   - component: {fileID: 61559764136496878}
   - component: {fileID: 58935515644121626}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 114944998810638042}
   - component: {fileID: 61816283515230048}
   - component: {fileID: 58885092338647512}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 114213213692640924}
   - component: {fileID: 61095913336366232}
   - component: {fileID: 58314005156008618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 114494775946605520}
   - component: {fileID: 61957932630764852}
   - component: {fileID: 58043667018175248}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 114606936222557598}
   - component: {fileID: 61518071189971418}
   - component: {fileID: 58601856021207770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 114482446966587384}
   - component: {fileID: 61100163084539812}
   - component: {fileID: 58140418543644832}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 114980133472840558}
   - component: {fileID: 61749968714951796}
   - component: {fileID: 58106389570334986}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 114305657630951084}
   - component: {fileID: 61639614426527174}
   - component: {fileID: 58708864676464522}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 114911400810415506}
   - component: {fileID: 61041338847182468}
   - component: {fileID: 58438410566164608}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -992,7 +992,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114305657630951084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1004,7 +1006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114482446966587384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1016,7 +1020,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114494775946605520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1028,7 +1034,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114531803021572934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1040,7 +1048,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114606936222557598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1052,7 +1062,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114763020542198374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1064,7 +1076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114801601015465174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1097,7 +1111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114944998810638042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1109,7 +1125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!114 &114980133472840558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1121,7 +1139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!212 &212004115672918704
 SpriteRenderer:
   m_ObjectHideFlags: 1

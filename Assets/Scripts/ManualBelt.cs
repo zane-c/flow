@@ -70,6 +70,7 @@ public class ManualBelt : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D col) {
+		print (col.gameObject.layer);
 		if (col.gameObject.layer == 11) {
 			Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D> ();
 			if (rb.velocity.magnitude < MAX_SPEED) {

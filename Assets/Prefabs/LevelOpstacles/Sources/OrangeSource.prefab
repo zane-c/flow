@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114774867334500888}
   - component: {fileID: 61193130013039598}
   - component: {fileID: 58226488375664798}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114492018498900084}
   - component: {fileID: 61077984391376294}
   - component: {fileID: 58242447867270238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 114978443694881314}
   - component: {fileID: 61363958569937632}
   - component: {fileID: 58064755760394152}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 114221105770070478}
   - component: {fileID: 61237709812553738}
   - component: {fileID: 58522334395522398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 114057438551320932}
   - component: {fileID: 61760642552715314}
   - component: {fileID: 58087922929689934}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 114699779304639330}
   - component: {fileID: 61015011591445706}
   - component: {fileID: 58316229952077558}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 114485021953898214}
   - component: {fileID: 61583791522797142}
   - component: {fileID: 58794104033326896}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 114943902604840684}
   - component: {fileID: 61168463716557294}
   - component: {fileID: 58774017342972052}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 114507898827156234}
   - component: {fileID: 61238936608559334}
   - component: {fileID: 58685804763288462}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 114359423931141130}
   - component: {fileID: 61504254971067984}
   - component: {fileID: 58522090048379696}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Orange
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -992,7 +992,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114221105770070478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1004,7 +1006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114359423931141130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1016,7 +1020,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114408793217730932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1049,7 +1055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114492018498900084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1061,7 +1069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114507898827156234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1073,7 +1083,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114699779304639330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1085,7 +1097,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114774867334500888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1097,7 +1111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114943902604840684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1109,7 +1125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!114 &114978443694881314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1121,7 +1139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1346637605302966, guid: b55310fe6696aa449a0c887a32794252, type: 2}
+  isDead: 0
 --- !u!212 &212024009838221956
 SpriteRenderer:
   m_ObjectHideFlags: 1
