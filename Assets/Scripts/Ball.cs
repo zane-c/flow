@@ -16,7 +16,7 @@ public class Ball : MonoBehaviour {
 	void Start () {
 		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 		rb = gameObject.GetComponent<Rigidbody2D> ();
-//		gameObject.GetComponent<CircleCollider2D> ().enabled = false;
+//		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 	}
 
 	public void init(Vector2 direction) {

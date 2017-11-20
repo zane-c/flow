@@ -45,6 +45,7 @@ public class Source : MonoBehaviour {
 			GameObject ball = stack.Pop();
 			ball.GetComponent<Rigidbody2D> ().gravityScale = 1;
 			ball.GetComponent<CircleCollider2D> ().enabled = true;
+			ball.GetComponent<BoxCollider2D> ().enabled = true;
 			ball.GetComponent<Ball> ().painted = false;
 		}
 	}

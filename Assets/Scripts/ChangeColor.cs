@@ -36,6 +36,7 @@ public class ChangeColor : MonoBehaviour {
 
 					newBall.GetComponent<Rigidbody2D> ().gravityScale = 1;
 					newBall.GetComponent<CircleCollider2D> ().enabled = true;
+					newBall.GetComponent<BoxCollider2D> ().enabled = true;
 
 					newBall.transform.position = newPosition;
 					newBall.transform.GetComponent<Rigidbody2D>().velocity = velocity;
