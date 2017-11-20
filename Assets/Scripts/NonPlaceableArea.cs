@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NonPlaceableArea : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider) {
+		print (collider.gameObject.name);
 		if (collider.gameObject.layer == 10) {
 			ManualBelt belt = collider.gameObject.GetComponent<ManualBelt> ();
 			if (belt) {
