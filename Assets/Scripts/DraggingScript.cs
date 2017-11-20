@@ -52,11 +52,11 @@ public class DraggingScript : MonoBehaviour {
 		{
 			if (draggingMode) {
 				ManualBelt belt = gameObjectToDrag.GetComponent<ManualBelt> ();
-				if (belt && !belt.getPlaceable()) {
+				if (belt && !belt.getPlaceable() && gameObjectToDrag.transform.position.x < 7) {
 					gameObjectToDrag.transform.position = GOCenter;
 				}
 				Wall wall = gameObjectToDrag.GetComponent<Wall> ();
-				if (wall && !wall.getPlaceable()) {
+				if (wall && !wall.getPlaceable() && gameObjectToDrag.transform.position.x < 7) {
 					gameObjectToDrag.transform.position = GOCenter;
 				}
 				if (gameObjectToDrag.transform.position.x > 7) {
