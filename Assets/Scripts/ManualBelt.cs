@@ -18,6 +18,8 @@ public class ManualBelt : MonoBehaviour {
 	public string startingDirection = "right";
 	public bool disabledOnStart = false;
 
+	private bool isPlaceable = true;
+
 	void Start () {
 		gears = transform.GetChild (1).transform;
 		rotateArrow = transform.GetChild (2).gameObject;
@@ -54,12 +56,26 @@ public class ManualBelt : MonoBehaviour {
 		GameObject.Find("ConveyorBeltCreator").GetComponent<Create> ().Increment ();
 	}
 
+	public void setPlaceable(bool isPlaceable) {
+		this.isPlaceable = isPlaceable;
+		if (!isPlaceable) {
+			sr.color = new Color (255.0f, 0.0f, 0.0f, 0.3f);
+		} else {
+			sr.color = new Color (255, 255, 255, 1);
+		}
+	}
+
+	public bool getPlaceable() {
+		return isPlaceable;
+	}
 
 	void OnTriggerStay2D(Collider2D col) {
-		Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D> ();
-		if (rb.velocity.magnitude < MAX_SPEED) {
-			rb.AddForce (new Vector2 (direction * speed, 0));
-			rb.AddTorque (direction * torque);
+		if (col.gameObject.layer == 11) {
+			Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D> ();
+			if (rb.velocity.magnitude < MAX_SPEED) {
+				rb.AddForce (new Vector2 (direction * speed, 0));
+				rb.AddTorque (direction * torque);
+			}
 		}
 	}
 }

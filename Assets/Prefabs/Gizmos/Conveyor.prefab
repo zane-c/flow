@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4397442209825386}
   - component: {fileID: 212800630795265254}
   - component: {fileID: 114644695007550062}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gear (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4845778314610000}
   - component: {fileID: 61681759478025306}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Direction
   m_TagString: Flippable
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4236330637201670}
   - component: {fileID: 212064071393408690}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: directionArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 4855251656120432}
   - component: {fileID: 212494138343018334}
   - component: {fileID: 114105480488287890}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4579015691268826}
   - component: {fileID: 212588493608310366}
   - component: {fileID: 114236875765205626}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4317248321062450}
   - component: {fileID: 61138777438691322}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rotator
   m_TagString: Rotatable
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4399029004068526}
   - component: {fileID: 212341811876683554}
   - component: {fileID: 114810039279882106}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gear (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4283681368140990}
   - component: {fileID: 212084641564764808}
   - component: {fileID: 114766494112889716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gear (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4944521360783106}
   - component: {fileID: 212528937519572282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tag
   m_TagString: ConveyorBelt
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4656993033745324}
   - component: {fileID: 212699039007535484}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rotateArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 61723897635277602}
   - component: {fileID: 61489742916714720}
   - component: {fileID: 114823018389043974}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Conveyor
   m_TagString: Draggable
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4516954565257926}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gears
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4252796987511964}
   - component: {fileID: 212160690801380278}
   - component: {fileID: 61350122254529010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4273271135666932}
   - component: {fileID: 50558891409495676}
-  m_Layer: 0
+  - component: {fileID: 58263060775498444}
+  - component: {fileID: 114434913654669068}
+  m_Layer: 9
   m_Name: SpinnyDing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +56,7 @@ GameObject:
   - component: {fileID: 4222797516256432}
   - component: {fileID: 212125819995520674}
   - component: {fileID: 61085075849809964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730485605309694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -1.08, z: 0}
+  m_LocalPosition: {x: -3.2177303, y: -7.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4252796987511964}
@@ -122,6 +124,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 3
+--- !u!58 &58263060775498444
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1730485605309694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.6
 --- !u!61 &61085075849809964
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -172,6 +189,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7666667, y: 0.24333334}
   m_EdgeRadius: 0
+--- !u!114 &114434913654669068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1730485605309694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252c856c61f731348835880834ce7517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212125819995520674
 SpriteRenderer:
   m_ObjectHideFlags: 1

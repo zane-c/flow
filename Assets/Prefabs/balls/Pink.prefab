@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114270952693092350}
   - component: {fileID: 61619419345928026}
   - component: {fileID: 58813477922634694}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pink
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -115,7 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddc5a2d02691471bacab127605152e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painted: 0
   GhostBall: {fileID: 1328428696864192, guid: e5cc386ffa1c4d445b6725b8fcf59f7d, type: 2}
+  isDead: 0
 --- !u!212 &212046036226989934
 SpriteRenderer:
   m_ObjectHideFlags: 1
