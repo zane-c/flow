@@ -2,18 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinnyDingScript : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+public class NonPlaceableArea : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.gameObject.layer == 10) {
 			ManualBelt belt = collider.gameObject.GetComponent<ManualBelt> ();
