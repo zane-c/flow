@@ -29,7 +29,6 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 			Vector3 mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			Vector3 newPosition = new Vector3(mousePosition.x, mousePosition.y, m_RectTransform.position.z);
 			createdConveyer.transform.position = newPosition;
-			RaycastHit2D hit2d = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 			numRemaining--;
 			component.text = "x" + numRemaining;
 		}

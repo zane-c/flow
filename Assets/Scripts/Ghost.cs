@@ -7,7 +7,6 @@ public class Ghost : MonoBehaviour {
 	private SpriteRenderer sprite;
 	private float timer = 0.2f;
 	private float opacity = 0.1f;
-	private float SCALE = 100.0f;
 
 	void Start () {
 		sprite = gameObject.GetComponent<SpriteRenderer>();
