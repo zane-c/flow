@@ -15,33 +15,53 @@ public class ScoreKeeper : MonoBehaviour {
 	private bool isGameOver = false;
 	private int stage = 1;
 
+	private AudioSource successSound;
+	private AudioSource failSound;
+	private AudioSource goalSound;
+
+	public bool isLegit = true; // prevents farting noise
+
 	void Start () {
+		AudioSource[] sources = GetComponentsInChildren<AudioSource> ();
+		successSound = sources [0];
+		failSound = sources [1];
+		goalSound = sources [2];
 	}
 
 	void Update () {
-		if (totalBalls <= (deadBalls + scoredBalls) && !isGameOver) {
-			gameOver ();
+		if (totalBalls <= (deadBalls + scoredBalls) && !isGameOver && isLegit) {
+			stageComplete ();
 		}
 	}
 
-	private void gameOver() {
+	private void stageComplete() {
 		isGameOver = true;
 		Text title = dialogue.transform.GetChild (0).GetComponent<Text> ();
 		Transform restart = dialogue.transform.GetChild (3);
 		Transform next = dialogue.transform.GetChild (4);
+		Transform quit = dialogue.transform.GetChild (5);
 
 		Text ballText = dialogue.transform.GetChild (1).GetComponentInChildren<Text> ();
 		Text stageText = dialogue.transform.GetChild (2).GetComponentInChildren<Text> ();
 
-		if (scoredBalls > 0) {
+		if (scoredBalls > 0 && stage == 5) {
+			title.text = "Level Complete";
+			next.gameObject.SetActive (false);
+			restart.gameObject.SetActive (false);
+			quit.gameObject.SetActive (true);
+			goalSound.Play();
+		} else if (scoredBalls > 0) {
 			title.text = "Stage Complete";
+			quit.gameObject.SetActive (false);
 			next.gameObject.SetActive (true);
 			restart.gameObject.SetActive (false);
-
+			successSound.Play ();
 		} else {
 			title.text = "Stage Failed";
+			quit.gameObject.SetActive (false);
 			next.gameObject.SetActive (false);
 			restart.gameObject.SetActive (true);
+			failSound.Play ();
 		}
 
 		ballText.text = scoredBalls + " / " + totalBalls;
@@ -59,24 +79,28 @@ public class ScoreKeeper : MonoBehaviour {
 		stage++;
 	}
 
-
 	public int getDeadBalls() {
 		return deadBalls;
 	}
+
 	public int getActiveBalls() {
 		return activeBalls;
 	}
+
 	public int getScoredBalls() {
 		return scoredBalls;
 	}
+
 	public void ballDied() {
 		deadBalls += 1;
 		activeBalls -= 1;
 	}
+
 	public void ballScored() {
 		scoredBalls += 1;
 		activeBalls -= 1;
 	}
+
 	public void addReserveBalls(int toAdd) {
 		totalBalls += toAdd;
 		reserveBalls += toAdd;

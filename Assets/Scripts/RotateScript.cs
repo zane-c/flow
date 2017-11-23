@@ -8,15 +8,20 @@ public class RotateScript : MonoBehaviour {
 
 	float deltaRotation;
 	public float deltaLimit;
-	public float deltaReduce ;
+	public float deltaReduce;
+	Quaternion savedRotation;
 	float previousRotation;
 	float currentRotation;
+	private AudioSource placeSound;
+	private AudioSource errorSound;
 
 	RaycastHit hit;
 	public bool rotatingMode = false;
 
 
 	void Start () {
+		placeSound = GameObject.Find ("GizmoPlaceSound").GetComponent<AudioSource> ();
+		errorSound = GameObject.Find ("GizmoPlaceSoundError").GetComponent<AudioSource> ();
 	}
 
 	float angleBetweenPoints (Vector2 position1, Vector2 position2)
@@ -28,7 +33,6 @@ public class RotateScript : MonoBehaviour {
 
 		Vector3 cross = Vector3.Cross (fromLine, toLine);
 
-		// did we wrap around?
 		if (cross.z > 0) {
 			angle = 360f - angle;
 		}
@@ -37,11 +41,6 @@ public class RotateScript : MonoBehaviour {
 	}
 
 	void Update () {
-		// this is how you rotate the conveyor belt
-		// parent.Rotate(0,0, 20 * Time.deltaTime);
-
-
-
 		if (Input.GetMouseButtonDown (0)) {
 
 			Vector3 screenToWorldPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -51,13 +50,15 @@ public class RotateScript : MonoBehaviour {
 				if (hit2d.collider.CompareTag ("Rotatable")) {
 					gameObjectToRotate = hit2d.collider.gameObject.transform.parent;
 					rotatingMode = true;
+					savedRotation = gameObjectToRotate.rotation;
+					print (savedRotation);
 					previousRotation = angleBetweenPoints (gameObjectToRotate.position, screenToWorldPoint);
 				}
 			}
 
 		}
 		if (Input.GetMouseButton (0)) {
-			if (rotatingMode == true) {
+			if (rotatingMode) {
 
 				currentRotation = angleBetweenPoints (gameObjectToRotate.position, Camera.main.ScreenToWorldPoint (Input.mousePosition));
 				deltaRotation = Mathf.DeltaAngle (currentRotation, previousRotation);
@@ -69,10 +70,22 @@ public class RotateScript : MonoBehaviour {
 			}
 		}
 		if (Input.GetMouseButtonUp (0)) {
-
-			rotatingMode = false;
-			deltaRotation = Mathf.Lerp (deltaRotation, 0, deltaReduce * Time.deltaTime);
+			if (gameObjectToRotate && rotatingMode) {
+				ManualBelt belt = gameObjectToRotate.gameObject.GetComponent<ManualBelt> ();
+				Wall wall = gameObjectToRotate.gameObject.GetComponent<Wall> ();
+				print (savedRotation);
+				if (belt && !belt.getPlaceable () && gameObjectToRotate.transform.position.x < 7) {
+					gameObjectToRotate.rotation = savedRotation;
+					errorSound.Play ();
+				} else if (wall && !wall.getPlaceable () && gameObjectToRotate.transform.position.x < 7) {
+					gameObjectToRotate.rotation = savedRotation;
+					errorSound.Play ();
+				} else {
+					deltaRotation = Mathf.Lerp (deltaRotation, 0, deltaReduce * Time.deltaTime);
+					placeSound.Play ();
+				}
+				rotatingMode = false;
+			}
 		}
-
 	}
 }

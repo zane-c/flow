@@ -16,9 +16,13 @@ public class DraggingScript : MonoBehaviour {
 	private RaycastHit hit;
 	private bool draggingMode = false;
 	private ScoreKeeper keeperScript;
+	private AudioSource placeSound;
+	private AudioSource errorSound;
 
 	void Start () {
 		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
+		placeSound = GameObject.Find ("GizmoPlaceSound").GetComponent<AudioSource> ();
+		errorSound = GameObject.Find ("GizmoPlaceSoundError").GetComponent<AudioSource> ();
 	}
 
 	void Update () {
@@ -43,32 +47,33 @@ public class DraggingScript : MonoBehaviour {
 			clickPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			newGOCenter = clickPosition - offset;
 			gameObjectToDrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOCenter.z);
-			if (gameObjectToDrag.transform.position.x > 6.5) {
-
-			}
 		}
 
 		if (Input.GetMouseButtonUp(0))
 		{
 			if (draggingMode) {
 				ManualBelt belt = gameObjectToDrag.GetComponent<ManualBelt> ();
-				if (belt && !belt.getPlaceable() && gameObjectToDrag.transform.position.x < 7) {
-					gameObjectToDrag.transform.position = GOCenter;
-				}
 				Wall wall = gameObjectToDrag.GetComponent<Wall> ();
-				if (wall && !wall.getPlaceable() && gameObjectToDrag.transform.position.x < 7) {
+				if (belt && !belt.getPlaceable () && gameObjectToDrag.transform.position.x < 7) {
 					gameObjectToDrag.transform.position = GOCenter;
+					errorSound.Play ();
+				} else if (wall && !wall.getPlaceable () && gameObjectToDrag.transform.position.x < 7) {
+					gameObjectToDrag.transform.position = GOCenter;
+					errorSound.Play ();
+				} else {
+					placeSound.Play ();
 				}
 				if (gameObjectToDrag.transform.position.x > 7) {
-					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag("ConveyorBelt")) {
+					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag ("ConveyorBelt")) {
 						creator = GameObject.Find ("ConveyorBeltCreator");
-						creator.GetComponent<Create>().Increment();
+						creator.GetComponent<Create> ().Increment ();
 					}
-					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag("Wall")) {
+					if (gameObjectToDrag.transform.GetChild (0).gameObject.CompareTag ("Wall")) {
 						creator = GameObject.Find ("WallCreator");
-						creator.GetComponent<Create>().Increment();
+						creator.GetComponent<Create> ().Increment ();
 					}
 					Destroy (gameObjectToDrag);
+					errorSound.Play ();
 				}
 				draggingMode = false;
 			}
