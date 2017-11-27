@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour {
 	private ScoreKeeper keeperScript;
 	private float initialSpeed = 5;
 	public bool painted;
+	public string color;
 	public GameObject GhostBall;
 	private Rigidbody2D rb;
 	public bool isDead = false;
@@ -34,10 +35,12 @@ public class Ball : MonoBehaviour {
 			keeperScript.ballDied ();
 			Destroy (gameObject);
 			isDead = true;
-		} else if (collider.tag == gameObject.name && !isDead) {
+		} else if (color == collider.gameObject.tag && !isDead) {
 			keeperScript.ballScored ();
 			isDead = true;
-			collider.transform.parent.gameObject.GetComponent<Sink>().AddBall (this.gameObject);
+			collider.transform.parent.gameObject.GetComponent<Sink> ().AddBall (this.gameObject);
+		} else if (collider.gameObject.tag == "Painter") {
+
 		} else if (collider.gameObject.layer == 8 && !isDead) {
 			keeperScript.ballDied ();
 			isDead = true;

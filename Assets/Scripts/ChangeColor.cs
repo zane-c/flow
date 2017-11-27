@@ -6,17 +6,19 @@ public class ChangeColor : MonoBehaviour {
 
 
 	public GameObject to;
+	public GameObject tagString;
+	private ScoreKeeper keeperScript;
 
 	// Use this for initialization
 	void Start () {
-
+		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		
 		switch (collider.tag) {
 		case "Ball": {
-				if (collider.transform.gameObject.GetComponent<Ball> ().painted == false) {
+				if (collider.transform.gameObject.GetComponent<Ball> ().painted == false && collider.transform.gameObject.GetComponent<Ball> ().color != to.GetComponent<Ball>().color) {
 
 					collider.transform.gameObject.GetComponent<Ball> ().painted = true;
 					Vector3 newPosition = collider.transform.position;
@@ -32,7 +34,6 @@ public class ChangeColor : MonoBehaviour {
 	
 					Destroy (collider.gameObject);
 					GameObject newBall = Instantiate (to);
-					newBall.GetComponent<Ball> ().painted = true;
 
 					newBall.GetComponent<Rigidbody2D> ().gravityScale = 1;
 					newBall.GetComponent<CircleCollider2D> ().enabled = true;

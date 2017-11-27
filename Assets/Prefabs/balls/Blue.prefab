@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painted: 0
+  color: Blue
   GhostBall: {fileID: 1118720360438174, guid: 38c7fad19737da2478f832de202fe85b, type: 2}
   isDead: 0
 --- !u!212 &212951391944248036
