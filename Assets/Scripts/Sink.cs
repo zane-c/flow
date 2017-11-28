@@ -84,6 +84,7 @@ public class Sink : MonoBehaviour {
 			ball.GetComponent<CircleCollider2D> ().enabled = true;
 			ball.GetComponent<BoxCollider2D> ().enabled = true;
 			ball.GetComponent<Rigidbody2D> ().gravityScale = 1;
+			ball.GetComponent<Ball> ().timeLeft = 15.0f;
 			numBalls--;
 			releaseNum++;
 			if (dropSound)

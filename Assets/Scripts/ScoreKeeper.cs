@@ -12,6 +12,8 @@ public class ScoreKeeper : MonoBehaviour {
 	private int activeBalls = 0;
 	private int scoredBalls = 0;
 	public GameObject dialogue;
+	public GameObject killBallDialogue;
+	private GameObject ballToKill;
 	private bool isGameOver = false;
 	private int stage = 1;
 
@@ -69,6 +71,35 @@ public class ScoreKeeper : MonoBehaviour {
 		ballText.text = scoredBalls + " / " + totalBalls;
 		stageText.text = stage + " / 4";
 		dialogue.SetActive (true);
+	}
+
+	public void killBall(GameObject ball) {
+		ballToKill = ball;
+		Text title = killBallDialogue.transform.GetChild (0).GetComponent<Text> ();
+		Transform kill = killBallDialogue.transform.GetChild (1);
+		Transform wait = killBallDialogue.transform.GetChild (2);
+		kill.gameObject.SetActive (true);
+		wait.gameObject.SetActive (true);
+		killBallDialogue.SetActive (true);
+
+		ballToKill.GetComponent<SpriteRenderer> ().color = new Color (255.0f, 0.0f, 0.0f, 0.3f);
+
+		Time.timeScale = 0;
+	}
+
+	public void kill() {
+		ballDied ();
+		ballToKill.GetComponent<Ball> ().isDead = true;
+		Destroy (ballToKill);
+		killBallDialogue.SetActive (false);
+		Time.timeScale = 1;
+	}
+
+	public void wait() {
+		ballToKill.GetComponent<Ball>().timeLeft = 5.0f;
+		ballToKill.GetComponent<SpriteRenderer> ().color = new Color (255, 255, 255, 1);
+		killBallDialogue.SetActive (false);
+		Time.timeScale = 1;
 	}
 
 	public void nextStage(int balls) {

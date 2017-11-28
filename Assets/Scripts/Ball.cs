@@ -11,13 +11,15 @@ public class Ball : MonoBehaviour {
 	public GameObject GhostBall;
 	private Rigidbody2D rb;
 	public bool isDead = false;
-
+	public float timeLeft;
+	public GameObject dialogue;
 
 
 	void Start () {
 		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 		rb = gameObject.GetComponent<Rigidbody2D> ();
-//		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+		timeLeft = 15.0f;
+
 	}
 
 	public void init(Vector2 direction) {
@@ -27,6 +29,13 @@ public class Ball : MonoBehaviour {
 	void Update () {
 		if (rb.velocity.magnitude > 0.1f) {
 			Instantiate (GhostBall, transform.position, transform.rotation);
+		}
+		if (gameObject.GetComponent<CircleCollider2D> ().enabled == true && timeLeft > 0 && isDead == false) {
+			timeLeft -= Time.deltaTime;
+		}
+		if(timeLeft < 0)
+		{
+			keeperScript.killBall (gameObject);
 		}
 	}
 
