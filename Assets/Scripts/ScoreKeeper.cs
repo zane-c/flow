@@ -18,6 +18,7 @@ public class ScoreKeeper : MonoBehaviour {
 	private AudioSource successSound;
 	private AudioSource failSound;
 	private AudioSource goalSound;
+	private AudioSource scoreSound;
 
 	public bool isLegit = true; // prevents farting noise
 
@@ -26,6 +27,7 @@ public class ScoreKeeper : MonoBehaviour {
 		successSound = sources [0];
 		failSound = sources [1];
 		goalSound = sources [2];
+		scoreSound = sources [3];
 	}
 
 	void Update () {
@@ -99,6 +101,7 @@ public class ScoreKeeper : MonoBehaviour {
 	public void ballScored() {
 		scoredBalls += 1;
 		activeBalls -= 1;
+		scoreSound.Play ();
 	}
 
 	public void addReserveBalls(int toAdd) {

@@ -18,27 +18,29 @@ public class Sink : MonoBehaviour {
 	private ScoreKeeper god;
 	public int releaseNum = 0;
 
+	private AudioSource dropSound;
+
 	// Use this for initialization
 	void Start () {
 		balls = new GameObject[10];
+		dropSound = GameObject.Find ("DropBallSound").GetComponent<AudioSource> ();
 	}
 
 	public void AddBall(GameObject ball) {
 		balls [numBalls] = ball;
 		numBalls++;
-		print ("numballs: " + numBalls);
 	}
 
-	void GravityOff() {
-		// also revive balls
+	void DisableBalls() {
 		foreach (GameObject b in balls) {
 			b.GetComponent<Rigidbody2D> ().gravityScale = 0;
 			b.transform.gameObject.GetComponent<Ball> ().isDead = false;
 
+			b.GetComponent<CircleCollider2D> ().enabled = false;
+			b.GetComponent<BoxCollider2D> ().enabled = false;
 		}
 	}
 
-	// Update is called once per frame
 	void Update () {
 		if (flip) {
 			// this should happen once
@@ -64,7 +66,7 @@ public class Sink : MonoBehaviour {
 	void Change() {
 		transform.Find("Trigger").gameObject.GetComponent<BoxCollider2D>().enabled = false;
 		createFittingArray ();
-		GravityOff ();
+		DisableBalls ();
 
 		Button playBtn = GameObject.Find ("DropBall").GetComponent<Button>();
 		playBtn.onClick.AddListener(() => {
@@ -78,12 +80,14 @@ public class Sink : MonoBehaviour {
 
 	void ReleaseBall() {
 		if (numBalls != 0 && flip) {
-			print ("releasing from sink");
 			GameObject ball = balls [releaseNum];
 			ball.GetComponent<CircleCollider2D> ().enabled = true;
+			ball.GetComponent<BoxCollider2D> ().enabled = true;
 			ball.GetComponent<Rigidbody2D> ().gravityScale = 1;
 			numBalls--;
 			releaseNum++;
+			if (dropSound)
+				dropSound.Play ();
 		}
 	}
 

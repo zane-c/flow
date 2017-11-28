@@ -19,6 +19,8 @@ public class Source : MonoBehaviour {
 	private Stack<GameObject> stack = new Stack<GameObject>();
 	private ScoreKeeper god;
 
+	private AudioSource dropSound;
+
 	void Start () {
 		stack.Push (b0);
 		stack.Push (b1);
@@ -38,6 +40,10 @@ public class Source : MonoBehaviour {
 
 		god = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 		god.addReserveBalls (10);
+		GameObject obj = GameObject.Find ("DropBallSound");
+		if (obj) {
+			dropSound = obj.GetComponent<AudioSource> ();
+		}
 	}
 
 	void ReleaseBall() {
@@ -47,6 +53,8 @@ public class Source : MonoBehaviour {
 			ball.GetComponent<CircleCollider2D> ().enabled = true;
 			ball.GetComponent<BoxCollider2D> ().enabled = true;
 			ball.GetComponent<Ball> ().painted = false;
+			if (dropSound)
+				dropSound.Play ();
 		}
 	}
 }

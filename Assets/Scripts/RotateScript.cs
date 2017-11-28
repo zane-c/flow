@@ -51,7 +51,6 @@ public class RotateScript : MonoBehaviour {
 					gameObjectToRotate = hit2d.collider.gameObject.transform.parent;
 					rotatingMode = true;
 					savedRotation = gameObjectToRotate.rotation;
-					print (savedRotation);
 					previousRotation = angleBetweenPoints (gameObjectToRotate.position, screenToWorldPoint);
 				}
 			}
@@ -73,7 +72,6 @@ public class RotateScript : MonoBehaviour {
 			if (gameObjectToRotate && rotatingMode) {
 				ManualBelt belt = gameObjectToRotate.gameObject.GetComponent<ManualBelt> ();
 				Wall wall = gameObjectToRotate.gameObject.GetComponent<Wall> ();
-				print (savedRotation);
 				if (belt && !belt.getPlaceable () && gameObjectToRotate.transform.position.x < 7) {
 					gameObjectToRotate.rotation = savedRotation;
 					errorSound.Play ();
