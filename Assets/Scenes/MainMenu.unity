@@ -4250,7 +4250,7 @@ Prefab:
     - target: {fileID: 114405845487677944, guid: 6d51dddc092732942a34b96f03dc7449,
         type: 2}
       propertyPath: isLegit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d51dddc092732942a34b96f03dc7449, type: 2}
