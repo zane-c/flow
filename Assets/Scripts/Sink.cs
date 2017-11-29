@@ -33,11 +33,11 @@ public class Sink : MonoBehaviour {
 
 	void DisableBalls() {
 		foreach (GameObject b in balls) {
+			b.GetComponent<CircleCollider2D> ().enabled = false;
+			b.GetComponent<BoxCollider2D> ().enabled = false;
 			b.GetComponent<Rigidbody2D> ().gravityScale = 0;
 			b.transform.gameObject.GetComponent<Ball> ().isDead = false;
 
-			b.GetComponent<CircleCollider2D> ().enabled = false;
-			b.GetComponent<BoxCollider2D> ().enabled = false;
 		}
 	}
 
@@ -74,7 +74,7 @@ public class Sink : MonoBehaviour {
 		});
 		changed = true;
 		god = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
-		god.nextStage (numBalls);
+		god.resetStage (numBalls);
 		//		balls.OrderBy( b => b.transform.position.y);
 	}
 
