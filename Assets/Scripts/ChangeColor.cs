@@ -6,7 +6,6 @@ public class ChangeColor : MonoBehaviour {
 
 
 	public GameObject to;
-	public GameObject tagString;
 	private ScoreKeeper keeperScript;
 
 	// Use this for initialization
