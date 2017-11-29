@@ -13,7 +13,8 @@ public class ScoreKeeper : MonoBehaviour {
 	private int scoredBalls = 0;
 	public GameObject dialogue;
 	private bool isGameOver = false;
-	private int stage = 1;
+	public int stage = 1;
+	public int numStages = 5;
 
 	private AudioSource successSound;
 	private AudioSource failSound;
@@ -46,7 +47,7 @@ public class ScoreKeeper : MonoBehaviour {
 		Text ballText = dialogue.transform.GetChild (1).GetComponentInChildren<Text> ();
 		Text stageText = dialogue.transform.GetChild (2).GetComponentInChildren<Text> ();
 
-		if (scoredBalls > 0 && stage == 5) {
+		if (scoredBalls > 0 && stage == numStages) {
 			title.text = "Level Complete";
 			next.gameObject.SetActive (false);
 			restart.gameObject.SetActive (false);
@@ -67,18 +68,17 @@ public class ScoreKeeper : MonoBehaviour {
 		}
 
 		ballText.text = scoredBalls + " / " + totalBalls;
-		stageText.text = stage + " / 4";
+		stageText.text = stage + " / " + numStages;
 		dialogue.SetActive (true);
 	}
 
-	public void nextStage(int balls) {
-		totalBalls = balls;
+	public void resetStage(int balls) {
 		deadBalls = 0;
-		reserveBalls = balls;
+		reserveBalls += balls;
+		totalBalls = reserveBalls;
 		activeBalls = 0;
 		scoredBalls = 0;
 		isGameOver = false;
-		stage++;
 	}
 
 	public int getDeadBalls() {
@@ -114,7 +114,7 @@ public class ScoreKeeper : MonoBehaviour {
 				activeBalls += 1;
 				reserveBalls -= 1;
 			}
-			// print(activeBalls + " - " + reserveBalls + " - " + deadBalls + " - " + scoredBalls + " - " + totalBalls);
+//			 print(activeBalls + " - " + reserveBalls + " - " + deadBalls + " - " + scoredBalls + " - " + totalBalls);
 		});
 	}
 }

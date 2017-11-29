@@ -43,4 +43,10 @@ public class Create : MonoBehaviour, IPointerDownHandler // required interface w
 		component.text = "x" + numRemaining;
 	}
 
+	public void setNewRemaining(int remaining) {
+		count = remaining;
+		Text component = countTxt.GetComponent<Text> ();
+		component.text = "x" + count;
+	}
+
 }
