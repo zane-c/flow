@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour {
 	void Start () {
 		keeperScript = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
 		rb = gameObject.GetComponent<Rigidbody2D> ();
-		timeLeft = 15.0f;
+		timeLeft = 7.0f;
 
 	}
 
