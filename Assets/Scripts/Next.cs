@@ -18,7 +18,7 @@ public class Next : MonoBehaviour {
 	public Create conveyor;
 	public Create wall;
 
-
+	public bool twosinks = true;
 
 	// Use this for initialization
 	void Start () {
@@ -31,8 +31,13 @@ public class Next : MonoBehaviour {
 		nextBtn.onClick.AddListener(() => {
 			maincamera.move = true;
 			maincamera.dest = destinations[sinknum];
-			greensinks[sinknum].flip = true;	
-			pinksinks[sinknum].flip = true;
+			if (twosinks) {
+				greensinks[sinknum].flip = true;	
+				pinksinks[sinknum].flip = true;
+			} else {
+				greensinks[sinknum].flip = true;
+			}
+
 			GameObject.Find("DialogueModal").SetActive(false);
 			GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().stage++;
 			conveyor.setNewRemaining(numconv[sinknum]);

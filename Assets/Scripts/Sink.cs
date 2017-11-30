@@ -18,6 +18,10 @@ public class Sink : MonoBehaviour {
 	private ScoreKeeper god;
 	public int releaseNum = 0;
 
+	public bool moving = false;
+	public float min;
+	public float max;
+
 	private AudioSource dropSound;
 
 	// Use this for initialization
@@ -57,6 +61,13 @@ public class Sink : MonoBehaviour {
 					sorted = true;
 				}
 			}
+
+		}
+
+
+		if (moving) {
+
+			transform.position = new Vector3(Mathf.PingPong(Time.time*1.5f,max - min) + min, transform.position.y, transform.position.z);
 		}
 
 
