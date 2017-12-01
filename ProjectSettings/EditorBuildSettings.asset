@@ -8,12 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3dce9d1663a78db4ea99cdf617796250
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TwoColorLevel.unity
     guid: a2cb290d7d803bf4082d2af6ed96c208
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BetaDemoTwo.unity
     guid: 1c84a506d855e4e04bdf38c3c7767dc0
+  - enabled: 0
+    path: 
+    guid: 6e27882daaf1ff6458d26cb6971e655f
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 376340c82f8db484cb74aa2dfcc55cc0
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: cfffd1d33ae544946986c5811895189a
   - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: 6e27882daaf1ff6458d26cb6971e655f
+    guid: 931e2349a67af2e47a304cc5fac7381a
