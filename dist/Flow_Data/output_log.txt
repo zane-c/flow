@@ -1,0 +1,96 @@
+Mono path[0] = 'C:/Users/zaned/Documents/Flow/dist/Flow_Data/Managed'
+Mono config path = 'C:/Users/zaned/Documents/Flow/dist/Flow_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/zaned/Documents/Flow/dist/Flow_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55218
+Multi-casting "[IP] 192.168.56.1 [Port] 55218 [Flags] 2 [Guid] 701401609 [EditorId] 3826313909 [Version] 1048832 [Id] WindowsPlayer(SPECTREx360) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55218]
+PlayerConnection already initialized - listening to [0.0.0.0:55218]
+Player data archive not found at `C:/Users/zaned/Documents/Flow/dist/Flow_Data/data.unity3d`, using local filesystem
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     2153 MB
+    Driver:   21.20.16.4727
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\zaned\Documents\Flow\dist\Flow_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.025 seconds
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.217579 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 14.360488 ms
+System memory in use before: 101.8 MB.
+System memory in use after: 62.3 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 1419.
+Total: 5.487405 ms (FindLiveObjects: 0.081777 ms CreateObjectMapping: 0.050962 ms MarkObjects: 0.455505 ms  DeleteObjects: 4.897578 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.091060 ms
+System memory in use before: 97.8 MB.
+System memory in use after: 97.9 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1419.
+Total: 1.245234 ms (FindLiveObjects: 0.129975 ms CreateObjectMapping: 0.047012 ms MarkObjects: 1.039406 ms  DeleteObjects: 0.026074 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.042764 ms
+System memory in use before: 101.1 MB.
+System memory in use after: 101.1 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1419.
+Total: 1.107752 ms (FindLiveObjects: 0.196345 ms CreateObjectMapping: 0.099950 ms MarkObjects: 0.796049 ms  DeleteObjects: 0.010271 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.828245 ms
+System memory in use before: 147.9 MB.
+System memory in use after: 107.7 MB.
+
+Unloading 69 unused Assets to reduce memory usage. Loaded Objects now: 1328.
+Total: 11.841970 ms (FindLiveObjects: 0.173827 ms CreateObjectMapping: 0.102716 ms MarkObjects: 1.142518 ms  DeleteObjects: 10.420539 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.886911 ms
+System memory in use before: 134.5 MB.
+System memory in use after: 95.0 MB.
+
+Unloading 76 unused Assets to reduce memory usage. Loaded Objects now: 1041.
+Total: 9.533230 ms (FindLiveObjects: 0.103901 ms CreateObjectMapping: 0.048197 ms MarkObjects: 0.698863 ms  DeleteObjects: 8.679502 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.237233 ms
+System memory in use before: 286.7 MB.
+System memory in use after: 286.7 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1041.
+Total: 0.651061 ms (FindLiveObjects: 0.106666 ms CreateObjectMapping: 0.025283 ms MarkObjects: 0.508049 ms  DeleteObjects: 0.009086 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.621825 ms
+System memory in use before: 0.50 GB.
+System memory in use after: 0.50 GB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1041.
+Total: 0.886913 ms (FindLiveObjects: 0.155259 ms CreateObjectMapping: 0.028839 ms MarkObjects: 0.687407 ms  DeleteObjects: 0.014222 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2904 -> priority: 1 
+  Thread -> id: 3810 -> priority: 1 
